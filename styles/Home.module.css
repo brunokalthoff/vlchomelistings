@@ -1,7 +1,6 @@
 .heroContainer {
     height: calc(100vh - 5rem);
     margin-top: 5rem;
-    background: var(--grey1);
     background-image: url('../public/svgs/home-bg-svg.svg');
     background-repeat: no-repeat;
     background-position: bottom right;
@@ -37,10 +36,35 @@
     font-weight: 700;
 }
 
+.videoWrapper {
+    width: 100%;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 0;
+}
+
 .video {
     width: 90%;
-    height: 60vh;
+    height: 30rem;
     background-color: white;
     border-radius: 2rem;
     border: solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video svg {
+    color: var(--blue1);
+    font-size: 5rem;
+}
+
+.different {
+    margin: 0 3rem 6rem;
+    text-align: center;
+}
+
+.different span {
+    color: var(--grey2);
 }

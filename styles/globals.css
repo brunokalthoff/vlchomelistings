@@ -12,29 +12,30 @@
   --green: hsla(176, 38.5%, 77.1%, 1);
   --red: hsla(348, 100%, 69.8%, 1);
   --yellow: hsla(50, 100%, 69.8%, 1);
-  --buttonPrimary: linear-gradient(to bottom, var(--blue1),var(--blue2));
+  --buttonPrimary: linear-gradient(to bottom, var(--blue1), var(--blue2));
 
   /* Font sizes */
   --headline1: 48px;
   --headline2: 32px;
   --headline3: 24px;
   --headline4: 20px;
-  --largetext: 20px;
+  --largetext: 18px;
   --normaltext: 16px;
   --smalltext: 14px;
+  --smallertext: 12px;
 }
 
 * {
-  box-sizing:border-box;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
 html,
 body {
-  
-  font-family: "Poppins", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: var(--grey1);
 }
 
 h1 {
@@ -59,6 +60,7 @@ h4 {
 
 p {
   font-size: var(--normaltext);
+  
 }
 
 a {

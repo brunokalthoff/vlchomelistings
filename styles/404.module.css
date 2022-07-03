@@ -1,0 +1,15 @@
+.container {
+    height: calc(100vh - 5rem);
+    width: 100%;
+    border: solid green;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../public/svgs/404-bg-svg.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+
+}

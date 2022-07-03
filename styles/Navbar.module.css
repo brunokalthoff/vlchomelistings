@@ -30,6 +30,10 @@
     font-size: 16px;
   }
 
+  .linksActive {
+    color: var(--blue3);
+  }
+
   .links a:last-child {
     margin: 0 3rem;
     background: var(--buttonPrimary);
