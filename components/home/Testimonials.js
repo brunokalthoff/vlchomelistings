@@ -1,9 +1,16 @@
 import styles from '../../styles/home/Testimonials.module.css'
 import { motion } from "framer-motion"
-import { useRef } from 'react'
+import { useRef, useEffect, useState } from 'react'
 
 function Testimonials() {
     const constraintsRef = useRef(null)
+    const innerRef = useRef(null)
+    const [width, setWidth] = useState(null)
+
+    useEffect(() => {
+        setWidth(constraintsRef.current.clientWidth - innerRef.current.clientWidth)
+    }, []);
+
     const testimonials = [
         {
             name: "Jeremey Hetherington",
@@ -28,8 +35,8 @@ function Testimonials() {
             </div>
 
             <div ref={constraintsRef} className={styles.container}>
-                <motion.div initial={{x:0}} animate={{x:-10000}} transition={{duration: 180}} drag="x" dragConstraints={constraintsRef} whileDrag={{ scale: 1.01 }} className={styles.inner}>
-                    {testimonials.map((item, key)=>{
+                <motion.div ref={innerRef} initial={{ x: 0 }} animate={{ x: width }} transition={{ repeat: Infinity, repeatType: "reverse", duration: -width * 0.05 }} drag="x" dragConstraints={constraintsRef} whileDrag={{ scale: 1.01 }} className={styles.inner}>
+                    {testimonials.map((item, key) => {
                         return (
                             <div key={key} className={styles.card}>
                                 <h4> {item.name} </h4>

@@ -12,7 +12,8 @@
   --green: hsla(176, 38.5%, 77.1%, 1);
   --red: hsla(348, 100%, 69.8%, 1);
   --yellow: hsla(50, 100%, 69.8%, 1);
-  --buttonPrimary: linear-gradient(to bottom, var(--blue1), var(--blue2));
+  --buttonPrimary: linear-gradient(to bottom, var(--blue1), var(--blue3));
+  --buttonPrimaryHover: linear-gradient(to bottom, var(--blue1), var(--blue2));
 
   /* Font sizes */
   --headline1: 48px;
@@ -37,6 +38,7 @@ body {
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background-color: var(--grey1);
     color: var(--black);
+    font-size: 16px;
 }
 
 h1 {

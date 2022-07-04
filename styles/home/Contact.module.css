@@ -1,0 +1,120 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 6rem;
+}
+
+.container h2 {
+  width: 100%;
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.formWrapper,
+.detailsWrapper {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 6rem;
+}
+
+.formWrapper h3,
+.detailsWrapper h3 {
+  max-width: 500px;
+}
+
+.formWrapper h3 span,
+.detailsWrapper h3 span {
+  color: var(--grey2);
+}
+
+.formCardWrapper,
+.detailsCardWrapper {
+  width: 26rem;
+  height: 26rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.formCardWrapper {
+  background-image: url("../../public/svgs/contact-form-bg-svg.svg");
+}
+
+.detailsCardWrapper {
+  background-image: url("../../public/svgs/contact-details-bg-svg.svg");
+}
+
+.card {
+  width: 24rem;
+  height: 24rem;
+  background: var(--white);
+  border-radius: 3rem;
+}
+
+.form {
+  max-height: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.input {
+  width: 100%;
+}
+
+.doubleInput {
+  display: flex;
+  gap: 2rem;
+}
+
+.input label {
+    font-size: var(--smallertext);
+}
+
+.input input,
+.input textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--black);
+  resize: none;
+  font-family: "Poppins";
+  transition: all .3s;
+}
+
+.input input:focus {
+  border-bottom: 2px solid var(--blue1);
+}
+
+.input textarea:focus {
+  border: 2px solid var(--blue1);
+  border-radius: .5rem;
+  padding: .5rem;
+}
+
+.input textarea:focus,
+.input input:focus {
+  outline: none;
+}
+
+.form button {
+    background: var(--buttonPrimary);
+    border-style: none;
+    width: 40%;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.form button:hover {
+    background: var(--buttonPrimaryHover);
+}

@@ -10,6 +10,7 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10;
   }
 
   .logo {
@@ -37,10 +38,14 @@
   .links a:last-child {
     margin: 0 1.5rem;
     background: var(--buttonPrimary);
-    padding: .5rem 1rem;
+    padding: .5rem .8rem;
     border-radius: 2rem;
     font-weight: 700;
     color: var(--white);
+  }
+
+  .links a:last-child:hover {
+    background: var(--buttonPrimaryHover);
   }
 
   .links a:last-child svg {
