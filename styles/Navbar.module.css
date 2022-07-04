@@ -12,11 +12,11 @@
     right: 0;
   }
 
-  .image {
-    height: 70%;
+  .logo {
+    height: 60%;
     width: 50%;
     position: relative;
-    margin-left: 3rem;
+    margin-left: 1.5rem;
   }
 
   .links {
@@ -35,7 +35,7 @@
   }
 
   .links a:last-child {
-    margin: 0 3rem;
+    margin: 0 1.5rem;
     background: var(--buttonPrimary);
     padding: .5rem 1rem;
     border-radius: 2rem;

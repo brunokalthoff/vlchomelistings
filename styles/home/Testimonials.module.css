@@ -1,0 +1,46 @@
+.container {
+    width: 100%;
+    overflow: hidden;
+    background: var(--white);
+    margin-top: 6rem;
+    padding: 6rem 0;
+}
+
+.inner {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;
+    padding: 0 6rem;
+    cursor: grab;
+}
+
+.headline {
+    margin-top: 6rem;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.headline span {
+    color: var(--grey2);
+}
+
+.card {
+    width: 600px;
+    height: 250px;
+    border-radius: 3rem;
+    box-shadow: 0 0 5px var(--grey2);
+    padding: 1.5rem;
+}
+
+.card h4 {
+    color: var(--blue2);
+}
+
+.card p {
+    font-size: var(--smalltext);
+    color: var(--grey2);
+    line-height: 2;
+    margin-top: 1rem;
+}

@@ -1,0 +1,53 @@
+.different {
+    margin: 6rem 3rem 0;
+    text-align: center;
+}
+
+.different span {
+    color: var(--grey2);
+}
+
+.container {
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6rem 12rem;
+    margin-top: 6rem;
+    padding: 6rem 0;
+}
+
+.card {
+    max-width: 300px;
+}
+
+.svg1 {
+    height: 160px;
+    width: 160px;
+    background-image: url('../../public/svgs/difference-1.svg');
+}
+
+.svg2 {
+    height: 160px;
+    width: 160px;
+    background-image: url('../../public/svgs/difference-2.svg');
+}
+
+.svg3 {
+    height: 160px;
+    width: 160px;
+    background-image: url('../../public/svgs/difference-3.svg');
+}
+
+.card h3 {
+    margin-top: 2rem;
+}
+
+.card p {
+   font-size: var(--smalltext);
+   color: var(--grey2);
+   line-height: 30px;
+   margin-top: 2rem;
+}
