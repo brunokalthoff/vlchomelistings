@@ -1,5 +1,5 @@
 import styles from '../styles/Footer.module.css'
-import { BsFacebook, BsInstagram, BsYoutube } from "react-icons/bs";
+import { BsInstagram, BsYoutube } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import Link from 'next/link';
 
@@ -9,9 +9,9 @@ function Footer() {
         <footer className={styles.footer}>
             <div className={styles.socialIcons}>
 
-                <span><FaFacebookF /> <p>Facebook</p></span>
-                <span><BsYoutube /><p>YouTube</p></span>
-                <span><BsInstagram /><p>Instagram</p></span>
+                <span><a href={'https://www.facebook.de'} target="_blank" rel="noopener noreferrer"><FaFacebookF /></a><p>Facebook</p></span>
+                <span><a href={'https://www.youtube.com'} target="_blank" rel="noopener noreferrer"><BsYoutube /></a><p>YouTube</p></span>
+                <span><a href={'https://www.instagram.de'} target="_blank" rel="noopener noreferrer"><BsInstagram /></a><p>Instagram</p></span>
 
             </div>
             <div className={styles.hl}></div>

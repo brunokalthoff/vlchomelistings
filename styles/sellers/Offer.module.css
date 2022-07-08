@@ -1,0 +1,137 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container h2 {
+  text-align: center;
+  margin-top: 6rem;
+  padding: 0 2rem;
+  max-width: 1000px;
+}
+
+.container h2 span {
+  color: var(--grey2);
+}
+
+.formWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 6rem;
+}
+
+.form {
+  width: 400px;
+  background: var(--white);
+  border-radius: 3rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.doubleInput {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--grey2);
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.form label {
+    color: var(--grey2);
+}
+
+.form input {
+  height: 2rem;
+}
+
+.form textarea {
+  display: block;
+  resize: none;
+  font-family: "Poppins";
+}
+
+.form input:focus {
+  border-bottom: 2px solid var(--blue1);
+}
+
+.form textarea:focus {
+  border: 2px solid var(--blue1);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.form select {
+  font-family: "Poppins";
+  margin-top: 2rem;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--black);
+}
+
+.form select:focus {
+  border-bottom: 2px solid var(--blue1);
+}
+
+.form button {
+  background: var(--buttonPrimary);
+  border-style: none;
+  width: 40%;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 2rem;
+  color: var(--white);
+  font-weight: 700;
+  font-size: var(--largetext);
+}
+
+.container h3 {
+  width: 100%;
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.cards {
+  width: 100%;
+  margin-top: 6rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  max-width: 1000px;
+}
+
+.card {
+    border-radius: 3rem;
+    /* background: var(--white); */
+    width: 15rem;
+    padding: 1rem 1.5rem;
+    font-size: var(--smalltext);
+}
+
+.card svg {
+    font-size: 5rem;
+    color: var(--grey2);
+    padding: 0;
+    display: block;
+}
+
+.card p {
+    margin-top: 2rem;
+    line-height: 32px;
+}
+
+/* .img {
+    display: none;
+} */

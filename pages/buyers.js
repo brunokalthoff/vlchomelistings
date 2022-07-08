@@ -1,4 +1,4 @@
-import Hero from "../components/buyers/Hero";
+// import Hero from "../components/buyers/Hero";
 
 function Buyers() {
     return ( 
