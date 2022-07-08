@@ -1,11 +1,10 @@
 .heroContainer {
-    height: calc(100vh - 5rem);
-    margin-top: 5rem;
-    background-image: url('../public/svgs/home-bg-svg.svg');
+    min-height: calc(100vh - var(--navbarheight));
+    margin-top: var(--navbarheight);
+    background-image: url('../public/svgs/home-hero-svg.svg');
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: 50%;
-
     display: flex;
     flex-direction: column;
     align-items: center;

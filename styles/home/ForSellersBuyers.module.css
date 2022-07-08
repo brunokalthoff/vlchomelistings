@@ -5,21 +5,12 @@
   align-items: center;
 }
 
-.forSellers {
+.wrapper {
   width: 80%;
+  max-width: 1000px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 6rem;
-  flex-wrap: wrap;
-  gap: 6rem;
-}
-
-.forBuyers {
-  width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 6rem;
   flex-wrap: wrap;
   gap: 6rem;

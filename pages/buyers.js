@@ -1,6 +1,8 @@
+import Hero from "../components/buyers/Hero";
+
 function Buyers() {
     return ( 
-        <>Buyers</>
+        <div></div>
      );
 }
 
