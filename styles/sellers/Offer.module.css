@@ -6,7 +6,7 @@
 
 .container h2 {
   text-align: center;
-  margin-top: 6rem;
+  margin-top: 4rem;
   padding: 0 2rem;
   max-width: 1000px;
 }
@@ -20,7 +20,7 @@
   width: 100%;
   justify-content: center;
   align-items: stretch;
-  margin-top: 6rem;
+  margin-top: 4rem;
 }
 
 .form {
@@ -100,31 +100,37 @@
 .container h3 {
   width: 100%;
   text-align: center;
-  margin-top: 6rem;
+  margin-top: 4rem;
+  padding: 0 2rem;
 }
 
 .cards {
   width: 100%;
-  margin-top: 6rem;
+  margin-top: 4rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 4rem;
   max-width: 1000px;
 }
 
 .card {
     border-radius: 3rem;
-    /* background: var(--white); */
-    width: 15rem;
-    padding: 1rem 1.5rem;
+    min-width: 250px;
+    max-width: 250px;
+    flex: 1;
     font-size: var(--smalltext);
+    display: flex;
+    flex-direction: column;
+
 }
 
 .card svg {
     font-size: 5rem;
     color: var(--grey2);
     padding: 0;
-    display: block;
+
 }
 
 .card p {

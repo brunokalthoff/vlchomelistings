@@ -8,8 +8,8 @@ import { TbArrowLoopRight2 } from 'react-icons/tb';
 function Offer() {
     return (
         <div className={styles.container}>
-            <h2>Request an offer.<br />
-                <span>Receive a guaranteed offer on your home in 72 hours. And close it in as little as 21 days.</span>
+            <h2>Request an offer on your home.<br />
+                <span> And close it in as little as 21 days.</span>
             </h2>
 
             <div className={styles.formWrapper}>
