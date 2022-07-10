@@ -1,11 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from '../../styles/buyers/Listings.module.css'
 import Map from './Map'
 import { CgBell, CgOptions } from 'react-icons/cg';
-import { motion } from "framer-motion"
 import commaNumber from 'comma-number'
 import { homes } from '../listings'
 import { useRouter } from 'next/router'
+import { motion } from "framer-motion"
+import Pagination from './Pagination';
 
 function Listings() {
     const router = useRouter()
@@ -19,6 +20,10 @@ function Listings() {
         stiffness: 700,
         damping: 30
     };
+
+    const [searchResults, setSearchResults] = useState(homes);
+    const [page, setPage] = useState(1);
+    const resultsPerPage = 9;
 
     return (
         <div className={styles.container}>
@@ -43,14 +48,14 @@ function Listings() {
             </div>
 
             <div className={styles.searchResults}>
-                {homes.map((listing, key) => {
+                {searchResults.slice(resultsPerPage * (page - 1), resultsPerPage * page).map((listing, key) => {
                     return (
                         <div key={key} className={styles.listing} onClick={() => router.push('listings/' + listing.msl)}>
                             <div className={styles.listingImg}>
                                 <img src={listing.img[0]} alt='' />
                             </div>
                             <p> {listing.adress} <br />
-                                <span>Bedrooms: {listing.beds}, Bathrooms: {listing.baths} </span> </p>
+                                <span>{listing.beds} Bedrooms, {listing.baths} Bathrooms</span> </p>
                             <p> ${commaNumber(listing.price)} </p>
                         </div>
                     )
@@ -62,9 +67,7 @@ function Listings() {
 
             </div>
 
-                <div className={styles.pagination}>
-                    
-                </div>
+                <Pagination page={page} setPage={setPage} results={searchResults.length} resultsPerPage={resultsPerPage} />
 
         </div>
     );
