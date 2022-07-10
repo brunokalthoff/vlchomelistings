@@ -3,7 +3,6 @@ import styles from '../../styles/home/Difference.module.css'
 
 function Difference() {
 
-
     const items = [
         {
             title: "Our Mission",
@@ -19,10 +18,8 @@ function Difference() {
             title: "Our Values",
             text: <>We value the happiness of our clients after we driver what we promised; We value commitment to culture and vision. Most of all, we value our people. Helping people to achieve their goals is not just our job, its our mission.</>,
             svg: styles.svg3,
-
         }
     ]
-
 
     return (
         <>
@@ -44,7 +41,6 @@ function Difference() {
                         </div>
                     )
                 })}
-
 
             </div>
         </>

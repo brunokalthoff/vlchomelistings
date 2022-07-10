@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 4rem;
 }
 
 .container h2 {
@@ -19,29 +20,42 @@
 .wrapper {
   display: flex;
   align-items: stretch;
-  justify-content: space-evenly;
+  justify-content: space-between;
+
   flex-wrap: wrap;
   gap: 4rem;
-  border: solid;
   width: 1000px;
   margin-top: 4rem;
 }
 
 .article {
   display: flex;
-  width: 400px;
-  border: solid;
+  align-items: center;
+  gap: 2rem;
+  width: 450px;
+  min-width: 450px;
 }
 
-.articleSvg {
-    height: 180px;
-    width: 180px;
+.svgs {
+  min-height: 8rem;
+  min-width: 8rem;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.articleSvg0 {
- background-color: blue;
+.svg1 {
+  background-image: url("../../public/svgs/credit-score-svg.svg");
+}
+.svg2 {
+  background-image: url("../../public/svgs/save-interest-svg.svg");
+}
+.svg3 {
+  background-image: url("../../public/svgs/avoid-pit-svg.svg");
+}
+.svg4 {
+  background-image: url("../../public/svgs/costly-mistakes-svg.svg");
 }
 
 .article h4 {
-
 }
