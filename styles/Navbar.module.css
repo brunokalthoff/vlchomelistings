@@ -38,8 +38,10 @@
   .links a:last-child {
     margin: 0 1.5rem;
     background: var(--buttonPrimary);
+    font-size: var(--largetext);
     padding: .5rem .8rem;
     border-radius: 2rem;
+    letter-spacing: -0.15px;
     font-weight: 700;
     color: var(--white);
   }

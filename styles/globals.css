@@ -77,3 +77,13 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+
+/* background: var(--buttonPrimary);
+padding: .8rem;
+border-radius: 2rem;
+color: var(--white);
+font-weight: 700; 
+font-size: var(--largetext);
+letter-spacing: -0.15px
+*/

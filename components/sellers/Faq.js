@@ -1,6 +1,6 @@
 import styles from '../../styles/sellers/Faq.module.css'
 import { HiPlus } from 'react-icons/hi';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 motion
 
@@ -22,12 +22,14 @@ const faq = [
 function Faq() {
     const [open, setOpen] = useState(null);
 
+
     const updateOpen = key => {
         setOpen(prev => {
             if (prev === key) return null
             return key
         })
     }
+
 
     return (
         <div className={styles.container}>
@@ -39,17 +41,17 @@ function Faq() {
                     return (
                         <motion.div onClick={() => updateOpen(key)} key={key} className={styles.question}>
                             <div className={styles.questionMain}> <h4> {item.question} </h4><motion.div animate={open === key ? { rotate: 45 } : { rotate: 0 }} transition={{ ease: 'linear' }}><HiPlus /></motion.div></div>
-                            {open === key && <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className={styles.answer}>
-                                <p> {item.answer} </p>
+                            {open === key && <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className={styles.answer}>
+                                <motion.p> {item.answer} </motion.p>
                             </motion.div>}
                         </motion.div>
                     )
                 })}
 
             </div>
-
         </div>
     );
 }
+
 
 export default Faq;

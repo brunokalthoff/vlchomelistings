@@ -1,5 +1,6 @@
 .container {
     width: 100%;
+    height: auto;
     background: var(--white);
     margin-top: 6rem;
     display: flex;

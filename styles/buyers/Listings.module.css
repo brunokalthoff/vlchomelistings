@@ -1,0 +1,171 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: var(--white);
+  }
+  
+  .container h2 {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 0 2rem;
+    max-width: 1000px;
+  }
+  
+  .container h2 span {
+    color: var(--grey2);
+  }
+
+  .searchBar {
+    width: 100%;
+    height: 4rem;
+    max-width: 1000px;
+    margin: 4rem 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mapToggle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .switch {
+    width: 5rem;
+    height: 60%;
+    background: var(--black);
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 50px;
+    padding: 6px;
+    cursor: pointer;
+  }
+  
+  .switch[data-isOn="true"] {
+    justify-content: flex-end;
+  }
+  
+  .handle {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  .mapToggle p {
+    font-weight: 500;
+    letter-spacing: -.15px;
+  }
+
+  .searchForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+
+  .searchForm input {
+    padding: 1rem 1.5rem;
+    width: 21rem;
+    border-radius: 2rem;
+    border: 2px solid var(--grey2);
+    outline: none;
+  }
+
+  .searchForm input:focus {
+    border: 2px solid var(--blue2);
+  }
+
+  .searchForm button {
+    background: var(--buttonPrimary);
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem;
+    font-weight: 700;
+    letter-spacing: -.15px;
+    background: var(--buttonPrimary);
+    font-size: var(--largetext);
+    padding: .8rem;
+    border-radius: 2rem;
+    margin-right: 1rem;
+    color: var(--white);
+    font-weight: 700;
+  }
+
+  .options {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .notifications svg {
+    font-size: 2rem;
+}
+
+  .filter {
+    padding: .5rem;
+    border: 2px solid var(--black);
+    border-radius: 1rem;
+  }
+
+  .filter svg {
+    font-size: 2rem;
+    vertical-align: middle;
+  }
+
+  .searchResults {
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+    gap: 4rem ;
+  }
+
+  .listingFiller {
+    height: 0;
+    width: 16rem;
+    visibility: hidden;
+  }
+
+  .listing {
+    height: 20rem;
+    width: 16rem;
+    cursor: pointer;
+  }
+
+  .listingImg {
+    height: 16rem;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .listingImg img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+  }
+
+  .listing p {
+    font-size: var(--smalltext);
+    margin-top: .5rem;
+  }
+
+  .listing span {
+    color: var(--grey2);
+  }
+
+  .listing p:nth-child(3) {
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+
+  .pagination {
+    display: flex;
+    
+  }
