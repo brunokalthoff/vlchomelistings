@@ -21,8 +21,8 @@ function Contact() {
                 <div className={styles.detailsCardWrapper}>
                     <div className={styles.card}>
                         <div className={styles.details}>
-                            <p>Jerry Van Leeuwen<br />
-                                <span>Salesperson</span></p>
+                            <h4>Jerry Van Leeuwen<br />
+                                <span>Salesperson</span></h4>
                             <p>📍 Adress<br /><span>1165 Franklin Blvd<br />
                                 Cambridge, ON, Canada</span></p>
                             <p>☎️ Phone <br /><span>519-772-4328</span></p>

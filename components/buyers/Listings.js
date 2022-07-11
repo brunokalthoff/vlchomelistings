@@ -18,7 +18,7 @@ function Listings() {
     const spring = {
         type: "spring",
         stiffness: 700,
-        damping: 30
+        damping: 30,
     };
 
     const [searchResults, setSearchResults] = useState(homes);
@@ -29,9 +29,11 @@ function Listings() {
         <div className={styles.container}>
             <h2>Home listings.<span> We serve Cambridge, Kitchener, Waterloo, Guelph, Woodstock, and surrounding areas.</span></h2>
 
-            {isOn && <Map />}
+            <motion.div layout transition={{delay: .3, duration: .5}} className={styles.mapWrapper}>
+                {isOn && <Map />}
+            </motion.div>
 
-            <div className={styles.searchBar}>
+            <motion.div layout transition={{delay: .3, duration: .5}} className={styles.searchBar}>
                 <div className={styles.mapToggle}>
                     <div className={styles.switch} data-isOn={isOn} onClick={toggleSwitch}>
                         <motion.div className={styles.handle} layout transition={spring} />
@@ -45,9 +47,9 @@ function Listings() {
                     <div className={styles.notifications}><CgBell /></div>
                     <div className={styles.filter}> <CgOptions /> Filter</div>
                 </div>
-            </div>
+            </motion.div>
 
-            <div className={styles.searchResults}>
+            <motion.div layout transition={{delay: .3, duration: .5}} className={styles.searchResults}>
                 {searchResults.slice(resultsPerPage * (page - 1), resultsPerPage * page).map((listing, key) => {
                     return (
                         <div key={key} className={styles.listing} onClick={() => router.push('listings/' + listing.msl)}>
@@ -65,9 +67,9 @@ function Listings() {
                 <div className={styles.listingFiller} />
                 <div className={styles.listingFiller} />
 
-            </div>
+            </motion.div>
 
-                <Pagination page={page} setPage={setPage} results={searchResults.length} resultsPerPage={resultsPerPage} />
+            <Pagination page={page} setPage={setPage} results={searchResults.length} resultsPerPage={resultsPerPage} />
 
         </div>
     );

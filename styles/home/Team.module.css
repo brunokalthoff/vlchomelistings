@@ -8,7 +8,7 @@
 .container h2 {
   width: 100%;
   padding: 0 2rem;
-  margin-top: 6rem;
+  margin-top: var(--sectionSpace);
   text-align: center;
 }
 
@@ -24,7 +24,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 3rem;
-  margin-top: 6rem;
+  margin-top: var(--sectionSpace);
   overflow: hidden;
 }
 
@@ -39,8 +39,8 @@
   align-items: center;
   justify-content: space-evenly;
   position: relative;
-  gap: 1rem;
-  padding: 3rem 0;
+  gap: .5rem;
+  padding: 2rem 0;
 }
 
 .next,
@@ -86,25 +86,23 @@
 
 .name {
     font-weight: 500;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .bio {
   width: 80%;
   background-color: var(--white);
   border-radius: 3rem;
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 .bio h4 {
     font-weight: 500;
 }
 
-.bio p {
+.bio h6 {
     margin-top: 1rem;
     columns: 2;
     column-gap: 3rem;
     color: var(--grey2);
-    font-size: var(--smalltext);
-    line-height: 1.5rem;
 }

@@ -37,7 +37,7 @@ function Difference() {
                             
                             <div className={item.svg}> </div>
                             <h3> {item.title} </h3>
-                            <p> {item.text} </p>
+                            <h6> {item.text} </h6>
                         </div>
                     )
                 })}

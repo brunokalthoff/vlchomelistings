@@ -18,6 +18,11 @@
     color: var(--grey2);
   }
 
+  .mapWrapper {
+    width: 100%;
+    height: fit-content;
+  }
+
   .searchBar {
     width: 100%;
     height: 3rem;

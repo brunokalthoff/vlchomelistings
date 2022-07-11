@@ -58,4 +58,10 @@
 }
 
 .article h4 {
+  cursor: pointer;
 }
+
+.article h4:hover {
+  text-decoration: underline;
+}
+

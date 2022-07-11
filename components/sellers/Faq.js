@@ -40,9 +40,9 @@ function Faq() {
                 {faq.map((item, key) => {
                     return (
                         <motion.div onClick={() => updateOpen(key)} key={key} className={styles.question}>
-                            <div className={styles.questionMain}> <h4> {item.question} </h4><motion.div animate={open === key ? { rotate: 45 } : { rotate: 0 }} transition={{ ease: 'linear' }}><HiPlus /></motion.div></div>
+                            <div className={styles.questionMain}> <h5> {item.question} </h5><motion.div animate={open === key ? { rotate: 45 } : { rotate: 0 }} transition={{ ease: 'linear' }}><HiPlus /></motion.div></div>
                             {open === key && <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className={styles.answer}>
-                                <motion.p> {item.answer} </motion.p>
+                                <motion.h6> {item.answer} </motion.h6>
                             </motion.div>}
                         </motion.div>
                     )

@@ -36,3 +36,7 @@
     font-size: var(--largetext);
     letter-spacing: -0.15px;
 }
+
+.buttons a:hover {
+    background: var(--buttonPrimaryHover);
+}

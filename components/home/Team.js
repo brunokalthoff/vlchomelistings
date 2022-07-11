@@ -121,7 +121,7 @@ function Team() {
 
             <motion.div layout="position" transition={{ duration: 1 }} className={styles.bio}>
                 <motion.h4 layout="position" transition={{ duration: 1 }}>{role[imageIndex]}</motion.h4>
-                <motion.p layout="position" transition={{ duration: 1 }}>{bio[imageIndex]}</motion.p>
+                <motion.h6 layout="position" transition={{ duration: 1 }}>{bio[imageIndex]}</motion.h6>
             </motion.div>
 
 

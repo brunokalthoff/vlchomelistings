@@ -2,23 +2,23 @@
     width: 100%;
     height: auto;
     background: var(--white);
-    margin-top: 6rem;
+    margin-top: var(--sectionSpace);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 4rem;
+    padding-bottom: 8rem;
 }
 
 .container h2 {
     width: 100%;
     text-align: center;
-    padding-top: 4rem;
+    padding-top: var(--sectionSpace);
 }
 
 .faqWrapper {
     width: 80%;
     max-width: 800px;
-    margin-top: 4rem;
+    margin-top: var(--sectionSpace);
     height: 20rem;
 
 }
@@ -32,8 +32,9 @@
     width: 100%;
 }
 
-.question h4 {
-    font-size: var(--largetext);
+.question h5 {
+    /* font-size: var(--largetext); */
+    font-weight: 700;
 }
 
 .questionMain {
@@ -53,9 +54,8 @@
     border-radius: 1.5rem;
 }
 
-.answer p {
+.answer h6 {
     margin-top: 1.5rem;
     color: var(--grey3);
-    font-size: var(--smalltext);
 }
 

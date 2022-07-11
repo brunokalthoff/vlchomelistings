@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 6rem;
+  margin-top: var(--sectionSpace);
   flex-wrap: wrap;
   gap: 6rem;
 }
@@ -37,10 +37,9 @@
   max-width: 500px;
 }
 
-.text p {
+.text h5 {
   font-size: var(--largetext);
   margin-top: 1rem;
-  line-height: 2rem;
   color: var(--grey2);
 }
 

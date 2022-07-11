@@ -1,4 +1,6 @@
+import { useRouter } from 'next/router';
 import styles from '../../styles/buyers/Articles.module.css'
+import { makeSlug } from '../helpers'
 
 const articles = [
     {
@@ -24,6 +26,7 @@ const articles = [
 ]
 
 function Articles() {
+    const router = useRouter();
     return (
         <div className={styles.container}>
             <h2>Articles. <br /> <span>Learn how to be smart and avoid common pitfalls when buying a home.</span>
@@ -33,7 +36,7 @@ function Articles() {
                     return <div className={styles.article} key={key}>
                         <div className={`${article.svg} ${styles.svgs}`} />
                         <div>
-                            <h4> {article.title}</h4>
+                            <h4 onClick={() => router.push('/articles/' + makeSlug(article.title))}> {article.title}</h4>
                             <p> {article.text} </p>
                         </div>
                     </div>

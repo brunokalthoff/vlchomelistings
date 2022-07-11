@@ -8,7 +8,7 @@ import { TbArrowLoopRight2 } from 'react-icons/tb';
 function Offer() {
     return (
         <div className={styles.container}>
-            <h2>Request an offer on your home.<br />
+            <h2>Request an offer on your house.<br />
                 <span> And close it in as little as 21 days.</span>
             </h2>
 

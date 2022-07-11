@@ -6,7 +6,7 @@
 
 .container h2 {
   text-align: center;
-  margin-top: 4rem;
+  margin-top: var(--sectionSpace);
   padding: 0 2rem;
   max-width: 1000px;
 }
@@ -20,7 +20,7 @@
   width: 100%;
   justify-content: center;
   align-items: stretch;
-  margin-top: 4rem;
+  margin-top: var(--sectionSpace);
 }
 
 .form {
@@ -100,18 +100,18 @@
 .container h3 {
   width: 100%;
   text-align: center;
-  margin-top: 4rem;
+  margin-top: var(--sectionSpace);
   padding: 0 2rem;
 }
 
 .cards {
   width: 100%;
-  margin-top: 4rem;
+  margin-top: var(--sectionSpace);
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: center;
-  gap: 4rem;
+  gap: var(--sectionSpace);;
   max-width: 1000px;
 }
 

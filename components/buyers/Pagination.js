@@ -69,7 +69,7 @@ function Pagination({ page, setPage, results, resultsPerPage }) {
                         animate="center"
                         exit="exit"
                         transition={{
-                            x: { type: "spring", stiffness: 300, damping: 30 },
+                            x: { type: "linear"},
                             opacity: { duration: 0.2 }
                         }}
                         drag="x"
@@ -91,8 +91,8 @@ function Pagination({ page, setPage, results, resultsPerPage }) {
                                 key={key}>
                                 {item}
                             </div>
-                        })} 
-                        {/* {items[itemIndex].at(-1) != items.at(-1).at(-1) && <> <div className={styles.dots}>...</div> <div onClick={paginateLast} className={page === items.at(-1).at(-1) ? `${styles.pageNumber} ${styles.pageNumberActive}` : styles.pageNumber}> {items.at(-1).at(-1)} </div></>} */}
+                        })}
+                            {/* {items[itemIndex].at(-1) != items.at(-1).at(-1) && <> <div className={styles.dots}>...</div> <div onClick={paginateLast} className={page === items.at(-1).at(-1) ? `${styles.pageNumber} ${styles.pageNumberActive}` : styles.pageNumber}> {items.at(-1).at(-1)} </div></>} */}
                         </div>
                     </ motion.div>
 
