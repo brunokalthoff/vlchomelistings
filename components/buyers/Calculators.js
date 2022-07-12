@@ -1,5 +1,4 @@
 import styles from '../../styles/buyers/Calculators.module.css'
-import Script from 'next/script'
 
 function Calculators() {
     return (
