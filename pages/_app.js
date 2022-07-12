@@ -10,8 +10,6 @@ import "@fontsource/poppins/700.css"
 import "@fontsource/poppins/800.css"
 import "@fontsource/poppins/900.css"
 import Layout from '../components/Layout'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 
 function MyApp({ Component, pageProps }) {
   return (

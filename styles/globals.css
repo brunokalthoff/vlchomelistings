@@ -18,7 +18,7 @@
   --buttonPrimaryHover: linear-gradient(to bottom, var(--blue1), var(--blue2));
 
   /* Font sizes */
-  --headline1: 56px;
+  --headline1: 48px;
   --headline2: 32px;
   --headline3: 24px;
   --headline4: 20px;
@@ -62,8 +62,8 @@ body {
 h1 {
   font-family: "Poppins";
   font-size: var(--headline1);
-  font-weight: 700;
-  letter-spacing: -1px;
+  font-weight: 800;
+  letter-spacing: -.15px;
   line-height: var(--lineHeightH1);
 }
 

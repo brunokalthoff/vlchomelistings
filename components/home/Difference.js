@@ -6,7 +6,7 @@ function Difference() {
     const items = [
         {
             title: "Our Mission",
-            text: <>We aim to be industry leaders by creating an authentic experience through honesty, hard work, and skill through challenging real estate agents everywhere to a higher level of standard.</>,
+            text: <>Our experience, knowledge and communication skills allow us to provide a level of service that is unmatched in our industry. We aim to be industry leaders by creating an authentic experience through honesty and hard work - challenging real estate agents everywhere to a higher level of standard.</>,
             svg: styles.svg1,
         },
         {
@@ -24,8 +24,8 @@ function Difference() {
     return (
         <>
             <div className={styles.different}>
-                <h2>What makes Van Leeuwen Real Estate Advisors different? <br />
-                    <span>Our experience, knowledge and communication skills allow us to provide a level of service that is unmatched in our industry.</span>
+                <h2>About us.<br />
+                    <span> What makes Van Leeuwen Real Estate Advisors different?</span>
                 </h2>
             </div>
 
@@ -35,7 +35,7 @@ function Difference() {
                     return (
                         <div className={styles.card} key={key}>
                             
-                            <div className={item.svg}> </div>
+                            <div className={`${item.svg} ${styles.svgs}`}> </div>
                             <h3> {item.title} </h3>
                             <h6> {item.text} </h6>
                         </div>

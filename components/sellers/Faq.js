@@ -1,6 +1,6 @@
 import styles from '../../styles/sellers/Faq.module.css'
 import { HiPlus } from 'react-icons/hi';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 motion
 
@@ -21,8 +21,7 @@ const faq = [
 
 function Faq() {
     const [open, setOpen] = useState(null);
-
-
+    
     const updateOpen = key => {
         setOpen(prev => {
             if (prev === key) return null

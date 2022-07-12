@@ -78,8 +78,8 @@
 }
 
 .input label {
-    font-size: var(--smalltext);
-    color: var(--grey2);
+  font-size: var(--smalltext);
+  color: var(--grey2);
 }
 
 .input input,
@@ -89,7 +89,7 @@
   border-bottom: 2px solid var(--grey2);
   resize: none;
   font-family: "Poppins";
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .input input:focus {
@@ -98,8 +98,8 @@
 
 .input textarea:focus {
   border: 2px solid var(--blue1);
-  border-radius: .5rem;
-  padding: .5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 
 .input textarea:focus,
@@ -108,19 +108,19 @@
 }
 
 .form button {
-    background: var(--buttonPrimary);
-    border-style: none;
-    width: 40%;
-    margin: 0 auto;
-    padding: 1rem;
-    border-radius: 2rem;
-    color: var(--white);
-    font-weight: 700;
-    font-size: var(--largetext);
+  background: var(--buttonPrimary);
+  border-style: none;
+  width: 40%;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 2rem;
+  color: var(--white);
+  font-weight: 700;
+  font-size: var(--largetext);
 }
 
 .form button:hover {
-    background: var(--buttonPrimaryHover);
+  background: var(--buttonPrimaryHover);
 }
 
 .details {
@@ -135,20 +135,27 @@
 .details p {
   font-weight: 400;
   font-size: var(--largetext);
+  line-height: 1.5rem;
+  margin-left: -.3rem;
 }
 
 .details h4 span {
   color: var(--grey2);
 }
 
-
 .details p:first-child span {
-font-weight: 300;
-color: var(--grey2);
+  font-weight: 300;
+  color: var(--grey2);
 }
 
 .details span {
   font-weight: 300;
-color: var(--grey3);
-font-size: var(--smalltext);
+  color: var(--grey3);
+  font-size: var(--smalltext);
+}
+
+.details p span {
+  display: block;
+  margin-top: .5rem;
+  margin-left: 1.9rem;
 }

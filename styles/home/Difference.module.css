@@ -1,54 +1,53 @@
 .different {
-    margin: var(--sectionSpace) 3rem 0;
-    text-align: center;
-
-    
+  margin: var(--sectionSpace) 3rem 0;
+  text-align: center;
 }
 
 .different span {
-    color: var(--grey2);
+  color: var(--grey2);
 }
 
 .container {
-    width: 100%;
-    background: white;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 6rem 12rem;
-    margin-top: var(--sectionSpace);
-    padding: var(--sectionSpace) 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6rem 12rem;
+  margin-top: var(--sectionSpace);
+  padding: var(--sectionSpace) 0;
 }
 
 .card {
-    max-width: 300px;
+  max-width: 300px;
+}
+
+.svgs {
+  height: 8rem;
+  width: 8rem;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .svg1 {
-    height: 160px;
-    width: 160px;
-    background-image: url('../../public/svgs/difference-1.svg');
+  background-image: url("../../public/svgs/difference-1.svg");
 }
 
 .svg2 {
-    height: 160px;
-    width: 160px;
-    background-image: url('../../public/svgs/difference-2.svg');
+  background-image: url("../../public/svgs/difference-2.svg");
 }
 
 .svg3 {
-    height: 160px;
-    width: 160px;
-    background-image: url('../../public/svgs/difference-3.svg');
+  background-image: url("../../public/svgs/difference-3.svg");
 }
 
 .card h3 {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .card h6 {
-   color: var(--grey2);
-   margin-top: 2rem;
-
+  color: var(--grey2);
+  margin-top: 2rem;
 }

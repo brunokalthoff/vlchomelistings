@@ -17,3 +17,28 @@
   .container h2 span {
     color: var(--grey2);
   }
+
+  .container h4 {
+    margin-top: var(--sectionSpace);
+  }
+
+  .calculator {
+    max-width: 1000px;
+  }
+
+
+  .calculator {
+    margin-top: 2rem;
+    width: 100%;   
+
+  }
+
+  .calculator:nth-child(3) {
+    height: 45rem;
+  }
+
+  .calculator iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
