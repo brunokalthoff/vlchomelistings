@@ -1,5 +1,6 @@
 .container {
-    min-width: 100%;
-    height: 30rem;
-    border: solid;
+    border: solid var(--grey2);
+    margin-top: var(--sectionSpace);
+    width: 100%;
+    height: calc(100vh - 3 * var(--navbarheight));
 }

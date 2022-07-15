@@ -4,6 +4,12 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 4rem;
+  position: relative;
+}
+
+.scrollTo {
+  position: absolute;
+  top: -5rem;
 }
 
 .container h2 {

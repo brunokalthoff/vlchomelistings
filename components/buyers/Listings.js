@@ -11,9 +11,12 @@ import Pagination from './Pagination';
 function Listings() {
     const router = useRouter()
     //Toggle Map
-    const [isOn, setIsOn] = useState(false);
+    const [showMap, setShowMap] = useState(false);
 
-    const toggleSwitch = () => setIsOn(prev => !prev);
+    const toggleSwitch = () => {
+        router.push('#mapy');
+        setShowMap(prev => !prev);
+    };
 
     const spring = {
         type: "spring",
@@ -27,15 +30,15 @@ function Listings() {
 
     return (
         <div className={styles.container}>
-            <h2>Home listings.<span> We serve Cambridge, Kitchener, Waterloo, Guelph, Woodstock, and surrounding areas.</span></h2>
+            <h2>Home listings.<span> We serve Cambridge, Kitchener, Waterloo, Guelph, Woodstock, and surrounding areas.</span> <div id='mapy' className={styles.scrollTo} /> </h2>
 
-            <motion.div layout transition={{delay: .3, duration: .5}} className={styles.mapWrapper}>
-                {isOn && <Map />}
+            <motion.div layout transition={{ delay: .3, duration: .5 }} className={styles.mapWrapper}>
+                {showMap && <Map searchResults={searchResults} />}
             </motion.div>
 
-            <motion.div layout transition={{delay: .3, duration: .5}} className={styles.searchBar}>
+            <motion.div layout transition={{ delay: .3, duration: .5 }} className={styles.searchBar}>
                 <div className={styles.mapToggle}>
-                    <div className={styles.switch} data-isOn={isOn} onClick={toggleSwitch}>
+                    <div className={showMap ? `${styles.switch} ${styles.switchOn}` : styles.switch} onClick={toggleSwitch}>
                         <motion.div className={styles.handle} layout transition={spring} />
                     </div>
                     <p>Show map</p></div>
@@ -49,7 +52,7 @@ function Listings() {
                 </div>
             </motion.div>
 
-            <motion.div layout transition={{delay: .3, duration: .5}} className={styles.searchResults}>
+            <motion.div layout transition={{ delay: .3, duration: .5 }} className={styles.searchResults}>
                 {searchResults.slice(resultsPerPage * (page - 1), resultsPerPage * page).map((listing, key) => {
                     return (
                         <div key={key} className={styles.listing} onClick={() => router.push('listings/' + listing.msl)}>

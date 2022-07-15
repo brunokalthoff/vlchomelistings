@@ -59,6 +59,10 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  margin-top: var(--navbarheight);
+}
+
 h1 {
   font-family: "Poppins";
   font-size: var(--headline1);

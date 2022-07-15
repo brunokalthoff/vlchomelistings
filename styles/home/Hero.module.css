@@ -1,6 +1,5 @@
 .container {
     min-height: calc(100vh - var(--navbarheight));
-    margin-top: var(--navbarheight);
     background-image: url('../../public/svgs/home-hero-svg.svg');
     background-repeat: no-repeat;
     background-position: bottom right;

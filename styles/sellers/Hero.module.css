@@ -1,6 +1,5 @@
 .container {
   min-height: calc(100vh - var(--navbarheight));
-  margin-top: var(--navbarheight);
   display: flex;
   flex-direction: column;
   align-items: center;

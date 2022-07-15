@@ -20,22 +20,25 @@ const faq = [
 ]
 
 function Faq() {
-    const [open, setOpen] = useState({
-        "faq0": false,
-        "faq1": true,
-        "faq2": false,
-    });
+    const [open, setOpen] = useState(null);
 
+    const updateOpen = key => {
+        setOpen(prev => {
+            if (prev === key) return null
+            return key;
+        })
+    }
 
     return (
         <div className={styles.container}>
             <h2>Frequently asked questions</h2>
             <div className={styles.faqWrapper}>
+
                 {faq.map((item, key) => {
                     return (
-                        <motion.div onClick={() => setOpen(prev => {return prev[`faq${key}`] = !prev[`faq${key}`]})} key={key} className={styles.question}>
+                        <motion.div onClick={() => updateOpen(key)} key={key} className={styles.question}>
                             <div className={styles.questionMain}> <h5> {item.question} </h5><motion.div animate={open === key ? { rotate: 45 } : { rotate: 0 }} transition={{ ease: 'linear' }}><HiPlus /></motion.div></div>
-                            {open[`faq${key}`] && <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className={styles.answer}>
+                            {open === key && <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className={styles.answer}>
                                 <motion.h6> {item.answer} </motion.h6>
                             </motion.div>}
                         </motion.div>
