@@ -3,7 +3,7 @@ import { IoPlay } from "react-icons/io5";
 
 function Video() {
     return (
-        <div className={styles.videoWrapper}>
+        <div title='Coming soon!' className={styles.videoWrapper}>
             <div className={styles.video}>
                 <IoPlay />
             </div>

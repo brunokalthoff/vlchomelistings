@@ -13,7 +13,12 @@
   justify-content: space-between;
   margin-top: var(--sectionSpace);
   flex-wrap: wrap;
-  gap: 6rem;
+  gap: 4rem;
+  
+}
+
+.wrapper li {
+  list-style:none;
 }
 
 .sellersSvg,

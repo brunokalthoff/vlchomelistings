@@ -1,0 +1,41 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  height: fit-content;
+  border: 5px solid var(--blue5);
+  background-color: var(--blue5);
+  font-family: monospace;
+}
+
+.frame {
+  border: 1px solid var(--grey1);
+  position: relative;
+}
+
+.close {
+    position: fixed;
+    right: 0;
+    top: 0;
+    color: var(--grey1);
+    font-size: 3rem;
+    margin: 2rem;
+    cursor: pointer;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 800px;
+  margin: var(--sectionSpace) auto;
+}
+
+.wrapper h2 {
+    color: var(--grey1);
+}
+
+.wrapper h5 {
+    color: var(--grey1);
+    margin-top: var(--sectionSpace);
+    font-weight: 300;
+    opacity: .8;
+
+}

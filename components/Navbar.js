@@ -15,7 +15,7 @@ function Navbar() {
 
     return (
         <div className={styles.navbar}>
-            <div className={styles.logo}>
+            <div className={styles.logo} onClick={() => router.push('/')}>
                 <Image
                     src={'/logo.png'}
                     alt='logo'

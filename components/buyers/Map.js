@@ -11,7 +11,6 @@ import {
     ComboboxPopover,
     ComboboxList,
     ComboboxOption,
-    ComboboxOptionText,
 } from "@reach/combobox";
 import "@reach/combobox/styles.css";
 
@@ -23,6 +22,8 @@ const icon = {
     strokeColor: "#162D3B",
     strokeWeight: 2,
 }
+
+const libraries = ["places"]
 
 function Map({ searchResults }) {
     const center = useMemo(() => ({ lat: 43.5, lng: -81 }), [])
@@ -36,7 +37,7 @@ function Map({ searchResults }) {
 
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API,
-        libraries: process.env.NEXT_PUBLIC_GOOGLE_MAPS_LIBRARIES,
+        libraries: libraries,
     })
 
     const makeMarkers = async () => {
@@ -60,14 +61,14 @@ function Map({ searchResults }) {
 
     return (
         <>
-            
 
-            <GoogleMap zoom={10} center={center} mapContainerClassName={styles.container}>
-            <div className={styles.autocompleteContainer}>
-                <PlacesAutocomplete setSelected={setSelected} />
-            </div>
-                {selected && <MarkerF position={selected} icon={icon} />}
-                {markers && markers.map((marker, key) => <MarkerF key={key} icon={icon} title={marker.title} position={marker.position}></MarkerF>)}
+
+            <GoogleMap zoom={10} center={selected ? selected : center} mapContainerClassName={styles.container}>
+                <div className={styles.autocompleteContainer}>
+                    <PlacesAutocomplete setSelected={setSelected} />
+                </div>
+                {selected && <MarkerF position={selected} />}
+                {markers && !selected && markers.map((marker, key) => <MarkerF key={key} icon={icon} title={marker.title} position={marker.position}></MarkerF>)}
             </GoogleMap>
 
         </>
@@ -75,6 +76,9 @@ function Map({ searchResults }) {
 }
 
 export default Map;
+
+
+
 
 function PlacesAutocomplete({ setSelected }) {
     const {
@@ -85,8 +89,18 @@ function PlacesAutocomplete({ setSelected }) {
         clearSuggestions,
     } = usePlacesAutocomplete();
 
+    const handleSelect = async address => {
+        setValue(address, false);
+        clearSuggestions();
+
+        const results = await getGeocode({ address });
+        console.log(results)
+        const { lat, lng } = await getLatLng(results[0])
+        setSelected({ lat, lng });
+    }
+
     return (
-        <Combobox>
+        <Combobox onSelect={handleSelect}>
             <ComboboxInput
                 className={styles.comboboxInput}
                 value={value}

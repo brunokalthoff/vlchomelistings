@@ -24,9 +24,9 @@ export default function Home() {
       </Head>
       <Hero />
       <Video />
-      <Difference />
       <ForSellersBuyers />
       <Testimonials />
+      <Difference />
       <Team />
       <Contact />
 

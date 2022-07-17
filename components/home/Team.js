@@ -72,7 +72,7 @@ function Team() {
 
     return (
         <div className={styles.container} suppressHydrationWarning={true}>
-            <h2>About us. <span>Meet the team.</span></h2>
+            <h2>Meet the team.<span> Get to know us.</span></h2>
 
             <div className={styles.slider}>
 
