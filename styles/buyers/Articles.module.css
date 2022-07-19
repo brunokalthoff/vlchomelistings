@@ -3,8 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 4rem;
+  padding: 0 2rem 4rem;
   position: relative;
+
 }
 
 .scrollTo {
@@ -26,11 +27,10 @@
 .wrapper {
   display: flex;
   align-items: stretch;
-  justify-content: space-between;
-
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 4rem;
-  width: 1000px;
+  gap: var(--sectionSpace);
+  max-width: 1000px;
   margin-top: 4rem;
 }
 

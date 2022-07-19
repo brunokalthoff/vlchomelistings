@@ -418,10 +418,6 @@ function Testimonials() {
                             <div key={key} className={styles.card}>
                                 <ImQuotesLeft />
                                 <h6> {item.text} </h6>
-                                {/* <div style={{
-                                width: '100%',
-                                textAlign: 'right'
-                             }}>   <ImQuotesRight /></div> */}
                                 <h5> {item.name} </h5>
                             </div>
                         )

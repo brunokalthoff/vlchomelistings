@@ -15,7 +15,7 @@ const articles = [
     },
     {
         title: "Avoid Money Pit",
-        text: "Be on the lookout for these 6 warning signs that could mean expensive repairs...",
+        text: "Be on the lookout for these 6 warning signs that could mean expensive repairs",
         svg: styles.svg3
     },
     {

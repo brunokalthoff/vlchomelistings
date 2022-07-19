@@ -25,7 +25,7 @@ function Difference() {
         <>
             <div className={styles.different}>
                 <h2>What makes Van Leeuwen Real Estate Advisors different?<br />
-                    <span> We pride ourselves on delivering an amazing service to our customers.</span>
+                    <span> We deliver an amazing service to our customers!</span>
                 </h2>
             </div>
 

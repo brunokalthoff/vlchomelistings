@@ -136,7 +136,7 @@
   font-weight: 400;
   font-size: var(--largetext);
   line-height: 1.5rem;
-  margin-left: -.3rem;
+  margin-left: -0.3rem;
 }
 
 .details h4 span {
@@ -156,6 +156,24 @@
 
 .details p span {
   display: block;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   margin-left: 1.9rem;
+}
+
+@media screen and (max-width: 900px) {
+
+  .formWrapper h3, .detailsWrapper h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .formWrapper {
+    flex-direction: column;
+  }
+  .detailsWrapper {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 450px) {
 }

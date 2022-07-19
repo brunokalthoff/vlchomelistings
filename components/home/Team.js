@@ -6,7 +6,7 @@ import { wrap } from "popmotion";
 import vanleeuwen from '../../public/team-vanleeuwen.jpg'
 import little from '../../public/team-little.jpg'
 import pohl from '../../public/team-pohl.jpg'
-import vincent from '../../public/team-vincent1.jpg'
+import vincent from '../../public/team-vincent.jpg'
 
 
 const images = [vanleeuwen, little, pohl, vincent]

@@ -23,9 +23,23 @@
 
 .heroSvg {
   background-image: url("../../public/svgs/buyers-hero-svg.svg");
-  background-position: center center;
+  background-position: center bottom;
   background-size: contain;
   background-repeat: no-repeat;
   flex: 3;
   width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    min-height: calc(70vh - var(--navbarheight));
+  }
+
+  .heroSvg {
+    width: 100%;
+    flex: 2;
+  }
+}
+
+@media screen and (max-width: 450px) {
 }

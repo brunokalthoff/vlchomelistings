@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import { makeSlug } from '../../components/helpers'
 import styles from '../../styles/articles/ArticleParts.module.css'
 import H1 from "../../components/articles/H1";
 import SubH1 from "../../components/articles/SubH1";
@@ -30,7 +29,7 @@ const articles = [
             Lenders also look at this figure to decide how much money they will lend you, and how much interest they will charge you on the loan.<br />
             That&quot;s why it&quot;s best to wait until after you&quot;ve bought your home to go shopping for furniture and appliances. There is also another reason to wait.<br />
             Once you&quot;ve bought your home, you can get a loan for up to 100% of your home&quot;s value to buy anything you want.</>,
-        svg: '',
+        svg: styles.heroCredit,
     },
     {
         slug: "save-on-interest",
@@ -46,10 +45,11 @@ const articles = [
         text3: <>If you can afford it, you are far better off getting a 15 year mortgage instead of 30. It won&apos;t cost you much more, and the interest savings are truly incredible.<br />
             If you have a mortgage of $100,000 at 8% interest over 15 years, your monthly payment would be about $200 more, but you&apos;d end up saving $92,083 in interest over the life of your mortgage!<br />
             Using these strategies is the easiest way to reduce your interest expenses and shorten your mortgage period.</>,
-        svg: ''
+        svg: styles.heroInterest,
     },
     {
         slug: "avoid-money-pit",
+        dateline: "Costs",
         title: "How to Avoid a Money Pit: Be on the Lookout for these 6 Warning Signs That Could Mean Expensive Repairs...",
         titleSub: "Many people think that serious defects in a home are easy to spot, but the truth is, often the most serious and costly problems can only be detected upon very close inspection. When you are considering buying a home, look for the following six telltale signs of serious problems...",
         titleH2: "1. ROOF",
@@ -62,14 +62,13 @@ const articles = [
         text4: <>Be sure to thoroughly inspect the heating and air conditioning systems in any home you are considering purchasing.</>,
         titleH25: <>5. BAD PAINT AND SIGNS OF ROTTING</>,
         text5: <>The paint inside and outside the house can reveal a lot about the condition of the underlying material. Check several places on several walls, using your eyes and a screwdriver for poking.</>,
-        titleH26: <></>,
-        text6: <></>,
-        titleH27: <>6. CRACKS AND OTHER IMPORTANT SIGNS</>,
-        text7: <>Cracks in walls, doors not closing properly and uneven floors can all be signs that there is a problem with the foundation. If the foundation is not strong, the entire house could literally collapse, so you should carefully check for these signs. A bad foundation may not mean imminent disaster, but it could be used to bargain for a lower sale price, or you could ask to have the owner repair it before the sale.</>,
-        svg: ''
+        titleH26: <>6. CRACKS AND OTHER IMPORTANT SIGNS</>,
+        text6: <>Cracks in walls, doors not closing properly and uneven floors can all be signs that there is a problem with the foundation. If the foundation is not strong, the entire house could literally collapse, so you should carefully check for these signs. A bad foundation may not mean imminent disaster, but it could be used to bargain for a lower sale price, or you could ask to have the owner repair it before the sale.</>,
+        svg: styles.heroCosts,
     },
     {
         slug: "5-costly-mistakes",
+        dateline: "First-Time Buyers",
         title: "5 Costly Mistakes Home Buyers Make",
         titleH2: "MISTAKE #1 NOT KNOWING WHAT THEY CAN AFFORD BEFORE MAKING AN OFFER",
         text: <>The best way to avoid this is to get pre-approved for a mortgage so you know exactly how much you can afford. Usually pre-approvals are free.</>,
@@ -81,7 +80,7 @@ const articles = [
         text4: <>You should always have a professional inspector look at the home before buying it, otherwise you could be looking at huge repair costs later on. Read this guide to avoiding a money pit.</>,
         titleH25: <>MISTAKE #5 NOT UNDERSTANDING HOW THEIR CREDIT CAN IMPACT THEIR ABILITY TO PURCHASE OR REFINANCE A HOME</>,
         text5: <>Get a mortgage professional to help you go over and prepare your credit file before you buy a home.</>,
-        svg: ''
+        svg: styles.heroMistakes,
     }
 ]
 
@@ -92,9 +91,14 @@ function Article() {
     const router = useRouter();
     const { slug } = router.query;
 
+    const { svg } = articles.find(article => {
+        return article.slug === slug;
+    })
+    console.log(svg)
+
     return (
         <div className={styles.container}>
-            <Hero />
+            <Hero svg={svg} />
             <GoBack />
 
             <div className={styles.articleWrapper}>
@@ -146,8 +150,6 @@ function Article() {
                         <Text text={articles[2].text5} />
                         <H2 h2={articles[2].titleH26} />
                         <Text text={articles[2].text6} />
-                        <H2 h2={articles[2].titleH27} />
-                        <Text text={articles[2].text7} />
                     </>
                 )
                 }

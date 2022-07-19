@@ -1,10 +1,18 @@
 import styles from '../../styles/buyers/Calculators.module.css'
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { HiPlus } from 'react-icons/hi';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 function Calculators() {
+    const [width, setWidth] = useState(0);
+
+    useEffect(() => {
+        setWidth(window.innerWidth)
+        const handleResize = () => setWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const [first, setFirst] = useState(false)
     const [second, setSecond] = useState(false)
@@ -16,7 +24,6 @@ function Calculators() {
             </h2>
 
             <div className={styles.wrapper}>
-
                 <motion.div onClick={() => setFirst(prev => !prev)} style={first ? { background: 'var(--grey1)', borderRadius: '1.5rem' } : {}} className={styles.title}>
                     <div className={styles.titleBar}>
                         <h5>Land transfer tax calculator</h5>
@@ -24,9 +31,12 @@ function Calculators() {
                             <HiPlus />
                         </motion.div>
                     </div>
+
                     {first && <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className={styles.calculator}>
                         <motion.div animate={{ rotate: 720 }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }}><AiOutlineLoading3Quarters /></motion.div>
-                        <iframe className={styles.iframe} src="https://www.ratehub.ca/widgets/payment-calc.php?ltt=only&lang=en&ac=954289" scrolling='no' style={{ height: '290px' }} frameBorder="0" />
+
+
+                        <iframe id='myFrame' className={styles.iframe} src="https://www.ratehub.ca/widgets/payment-calc.php?ltt=only&lang=en&ac=954289" scrolling='no' style={width > 769 ? { height: 290 } : { height: 440 }} frameBorder="0" />
                     </motion.div>}
                 </motion.div>
 
@@ -40,7 +50,7 @@ function Calculators() {
                     </div>
                     {second && <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} className={styles.calculator}>
                         <motion.div animate={{ rotate: 720 }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }}><AiOutlineLoading3Quarters /></motion.div>
-                        <iframe className={styles.iframe} src="https://www.ratehub.ca/widgets/payment-calc.php?lang=en&ac=954289" scrolling='no' style={{ height: '625px' }} frameBorder="0" />
+                        <iframe className={styles.iframe} src="https://www.ratehub.ca/widgets/payment-calc.php?lang=en&ac=954289" scrolling='no' style={width > 785 ? { height: '625px' } : { height: '770px' }} frameBorder="0" />
                     </motion.div>}
                 </motion.div>
 

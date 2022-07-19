@@ -16,7 +16,7 @@
   flex-wrap: wrap;
   gap: 6rem 12rem;
   margin-top: var(--sectionSpace);
-  padding: var(--sectionSpace) 0;
+  padding: var(--sectionSpace) 2rem;
 }
 
 .card {
@@ -50,4 +50,10 @@
 .card h6 {
   color: var(--grey2);
   margin-top: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+}
+
+@media screen and (max-width: 450px) {
 }

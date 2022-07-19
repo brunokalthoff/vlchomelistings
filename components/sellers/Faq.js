@@ -31,7 +31,7 @@ function Faq() {
 
     return (
         <div className={styles.container}>
-            <h2>Frequently asked questions 🤔</h2>
+            <h2>Frequently asked questions 💭</h2>
             <div className={styles.faqWrapper}>
 
                 {faq.map((item, key) => {

@@ -12,13 +12,11 @@
   align-items: center;
   justify-content: space-between;
   margin-top: var(--sectionSpace);
-  flex-wrap: wrap;
   gap: 4rem;
-  
 }
 
 .wrapper li {
-  list-style:none;
+  list-style: none;
 }
 
 .sellersSvg,
@@ -53,17 +51,45 @@
   background: var(--buttonPrimary);
   padding: 1rem;
   border-radius: 2rem;
-  margin-right: 1rem;
   color: var(--white);
   font-weight: 700;
   font-size: var(--largetext);
   border: none;
   margin-top: 2.5rem;
-  letter-spacing: -0.1px;
+  letter-spacing: -0.15px;
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .button:hover {
   background: var(--buttonPrimaryHover);
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+    width: 95%;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+  }
+
+  .container > div:first-child {
+    flex-direction: column-reverse;
+  }
+
+  .sellersSvg,
+  .buyersSvg {
+ 
+  }
+
+  .text {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 450px) {
 }

@@ -67,7 +67,7 @@ h1 {
   font-family: "Poppins";
   font-size: var(--headline1);
   font-weight: 800;
-  letter-spacing: -.15px;
+  letter-spacing: -0.15px;
   line-height: var(--lineHeightH1);
 }
 
@@ -127,3 +127,48 @@ letter-spacing: -0.15px
 /* background-position: center center;
 background-size: contain;
 background-repeat: no-repeat; */
+
+@media screen and (max-width: 900px) {
+  :root {
+    /* Font sizes */
+    --headline1: 32px;
+    --headline2: 24px;
+    --headline3: 20px;
+    --headline4: 18px;
+    --largetext: 16px;
+    --normaltext: 14px;
+    --smalltext: 12px;
+    --smallertext: 11px;
+
+    /* Space */
+    --navbarheight: 5rem;
+    --sectionSpace: 4rem;
+    /* Heights */
+    --lineHeightH1: calc(var(--headline1) * 1.5);
+    --lineHeightH2: calc(var(--headline2) * 1.5);
+    --lineHeightH3: calc(var(--headline3) * 1.5);
+    --lineHeightH4: calc(var(--headline4) * 1.5);
+
+    --lineHeightH5: calc(var(--largetext) * 2);
+    --lineHeightP: calc(var(--normaltext) * 2);
+    --lineHeightH6: calc(var(--smalltext) * 2.5);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  :root {
+    /* Heights */
+    --navbarheight: 5rem;
+    --sectionSpace: 3rem;
+
+    --lineHeightH1: calc(var(--headline1) * 1.5);
+    --lineHeightH2: calc(var(--headline2) * 1.5);
+    --lineHeightH3: calc(var(--headline3) * 1.5);
+    --lineHeightH4: calc(var(--headline4) * 1.5);
+
+    --lineHeightH5: calc(var(--largetext) * 2);
+    --lineHeightP: calc(var(--normaltext) * 2);
+    --lineHeightH6: calc(var(--smalltext) * 2.5);
+    /* --lineHeightP: 30px; */
+  }
+}

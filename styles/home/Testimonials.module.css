@@ -1,51 +1,62 @@
 .container {
-    width: 100%;
-    overflow: hidden;
-    /* background: var(--white); */
-    margin-top: var(--sectionSpace);
+  width: 100%;
+  overflow: hidden;
+  /* background: var(--white); */
+  margin-top: var(--sectionSpace);
 }
 
 .inner {
-    width: fit-content;
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    gap: var(--sectionSpace);
-    padding: 0 var(--sectionSpace);
-    cursor: grab;
+  width: fit-content;
+  display: flex;
+  /* align-items: stretch; */
+  justify-content: space-between;
+  gap: var(--sectionSpace);
+  padding: 0 var(--sectionSpace);
+  cursor: grab;
 }
 
 .headline {
-    margin-top: var(--sectionSpace);
-    text-align: center;
-    padding: 0 2rem;
+  margin-top: var(--sectionSpace);
+  text-align: center;
+  padding: 0 2rem;
 }
 
 .headline span {
-    color: var(--grey2);
+  color: var(--grey2);
 }
 
 .card {
-    width: 500px;
-    border-radius: 2rem;
-    box-shadow: 0 0 15px 5px var(--grey1);
-    padding: 1.5rem;
-    background: var(--white);
+  width: 500px;
+  border-radius: 2rem;
+  box-shadow: 0 0 15px 5px var(--grey1);
+  padding: 1.5rem;
+  background: var(--white);
 }
 
 .card h5 {
-    color: var(--grey3);
-    margin-top: 2rem;
+  color: var(--grey3);
+  margin-top: 2rem;
 }
 
 .card h6 {
-    font-size: var(--smalltext);
-    color: var(--grey2);
+  font-size: var(--smalltext);
+  color: var(--grey2);
 }
 
 .card svg {
-    color: var(--blue1);
-    margin: 1rem;
-    font-size: 2rem;
-    opacity: .8;
+  color: var(--blue1);
+  margin: 1rem;
+  font-size: 2rem;
+  opacity: 0.8;
+}
+
+
+@media screen and (max-width: 900px) {
+    .card {
+        width: 80vw;  
+    }
+}
+
+
+@media screen and (max-width: 450px) {
 }

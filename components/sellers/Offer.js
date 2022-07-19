@@ -36,7 +36,7 @@ function Offer() {
 
             </div>
 
-            <h3>We provide you with options and full control over the home selling process 💪</h3>
+            <h3>We provide you with options and full control over the home selling process</h3>
             <div className={styles.cards}>
                 <div className={styles.card}><MdPriceCheck /> <p>Receive a competitive & guaranteed offer on your home in 72 hours.</p></div>
                 {/* <BsArrowRightShort /> */}

@@ -7,6 +7,8 @@
 .container h2 {
   text-align: center;
   margin-top: var(--sectionSpace);
+  margin-top: 3rem;
+
   padding: 0 2rem;
   max-width: 1000px;
 }
@@ -50,7 +52,7 @@
 }
 
 .form label {
-    color: var(--grey2);
+  color: var(--grey2);
 }
 
 .form input {
@@ -111,33 +113,37 @@
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: center;
-  gap: var(--sectionSpace);;
+  gap: var(--sectionSpace);
   max-width: 1000px;
+  padding: 0 2rem;
 }
 
 .card {
-    border-radius: 3rem;
-    min-width: 250px;
-    max-width: 250px;
-    flex: 1;
-    font-size: var(--smalltext);
-    display: flex;
-    flex-direction: column;
-
+  border-radius: 3rem;
+  min-width: 250px;
+  max-width: 250px;
+  flex: 1;
+  font-size: var(--smalltext);
+  display: flex;
+  flex-direction: column;
 }
 
 .card svg {
-    font-size: 5rem;
-    color: var(--grey2);
-    padding: 0;
-
+  font-size: 5rem;
+  color: var(--grey2);
+  padding: 0;
 }
 
 .card p {
-    margin-top: 2rem;
-    line-height: 32px;
+  margin-top: 2rem;
+  line-height: 32px;
 }
 
-/* .img {
+@media screen and (max-width: 900px) {
+  .img {
     display: none;
-} */
+  }
+}
+
+@media screen and (max-width: 450px) {
+}

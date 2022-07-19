@@ -14,8 +14,8 @@ function Footer({ setPrivacyTerms }) {
             </div>
             <div className={styles.hl}></div>
             <div className={styles.text}>
-                <div className={styles.smallerText}>Data provided by the Ontario Regional Technology & Information Systems. The information is deemed reliable, but is not guaranteed. <a onClick={() => setPrivacyTerms(1)}>Terms of Use</a> | <a onClick={() => setPrivacyTerms(2)}>Privacy Policy</a></div>
-                <div className={styles.smallText}>Copyright 2022 By Van Leeuwen Real Estate Advisors</div>
+                <div className={styles.smallerText}>Data provided by the Ontario Regional Technology & Information Systems. The information is deemed reliable, but is not guaranteed. <br /><a onClick={() => setPrivacyTerms(1)}>Terms of Use</a> | <a onClick={() => setPrivacyTerms(2)}>Privacy Policy</a></div>
+                <div className={styles.smallText}>Copyright 2022 by Van Leeuwen Real Estate Advisors</div>
                 <div className={styles.smallerText}>Design and Code by <a href='https://brunokalthoff.dev/' target="_blank" rel="noopener noreferrer">Bruno Kalthoff</a></div>
 
             </div>

@@ -10,10 +10,35 @@
 .hero {
   min-width: 100%;
   height: 20rem;
-  background-image: url("../../public/svgs/article-hero-svg.svg");
-  background-position: center top;
+  background-image: url("../../public/svgs/article-hero-bg.svg");
+  background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.innerHero {
+  min-width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 90%;
+}
+
+.heroCredit {
+  background-image: url("../../public/svgs/article-credit-hero.svg");
+}
+
+.heroInterest {
+  background-image: url("../../public/svgs/article-interest-hero.svg");
+}
+
+.heroCosts {
+  background-image: url("../../public/svgs/article-costs-hero.svg");
+}
+
+.heroMistakes {
+  background-image: url("../../public/svgs/article-mistakes-hero.svg");
 }
 
 .goBack {
@@ -40,7 +65,7 @@
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 2rem;
 }
 
 .dateline {
@@ -70,4 +95,13 @@
 
 .text {
   margin-top: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+  .hero {
+    height: 10rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
 }
