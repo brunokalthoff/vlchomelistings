@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: var(--white);
+    padding-bottom: var(--sectionSpace);
+  }
+  
+  .container h2 {
+    text-align: center;
+    margin-top: var(--sectionSpace);
+    padding: 0 2rem;
+    max-width: 1000px;
+    position: relative;
+  }
+  
+  .container h2 span {
+    color: var(--grey2);
+  }
+
+  .button {
+    width: fit-content;
+    background: var(--buttonPrimary);
+    padding: 1rem;
+    border-radius: 2rem;
+    margin-right: 1rem;
+    color: var(--white);
+    font-weight: 700;
+    font-size: var(--largetext);
+    border: none;
+    margin-top: 2.5rem;
+    letter-spacing: -0.1px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .button:hover {
+    background: var(--buttonPrimaryHover);
+  }

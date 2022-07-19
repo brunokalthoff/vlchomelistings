@@ -30,7 +30,7 @@ function Articles() {
     return (
         <div className={styles.container}>
             <div id='articles' className={styles.scrollTo} />
-            <h2>Articles. <br /> <span>Learn how to be smart and avoid common pitfalls when buying a home.</span>
+            <h2>Articles.<span> Be smart when buying your home.</span>
             </h2>
             <div className={styles.wrapper}>
                 {articles.map((article, key) => {

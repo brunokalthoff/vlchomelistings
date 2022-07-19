@@ -1,6 +1,6 @@
 :root {
   /* Color styles */
-  --black: hsla(0, 0%, 11%, 1);
+  --black: #1c1c1c;
   --black: #1e293b;
   --grey1: hsla(206, 41.2%, 96.7%, 1);
   --grey2: hsla(216, 14.5%, 56.9%, 1);
@@ -14,7 +14,7 @@
   --green: hsla(176, 38.5%, 77.1%, 1);
   --red: hsla(348, 100%, 69.8%, 1);
   --yellow: hsla(50, 100%, 69.8%, 1);
-  --buttonPrimary: linear-gradient(to bottom, var(--blue2), var(--blue2));
+  --buttonPrimary: linear-gradient(to bottom, var(--blue1), var(--blue1));
   --buttonPrimaryHover: linear-gradient(to bottom, var(--blue1), var(--blue2));
 
   /* Font sizes */

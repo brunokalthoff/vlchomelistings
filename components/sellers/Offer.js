@@ -1,14 +1,14 @@
 import styles from '../../styles/sellers/Offer.module.css'
 import Image from 'next/image';
 import contactJerry from '../../public/contact-jerry.png'
-import { BsArrowRightShort, BsSpeedometer2 } from 'react-icons/bs';
-import { MdOutlineLocalOffer } from 'react-icons/md';
+import { TbHeartHandshake } from 'react-icons/tb';
+import { MdPriceCheck, MdSpeed } from 'react-icons/md';
 import { TbArrowLoopRight2 } from 'react-icons/tb';
 
 function Offer() {
     return (
         <div className={styles.container}>
-            <h2>Request an offer.<br />
+            <h2>Get a guaranteed offer in 72 hours.<br />
                 <span> And close it in as little as 21 days.</span>
             </h2>
 
@@ -36,13 +36,13 @@ function Offer() {
 
             </div>
 
-            <h3>We provide you with options and full control over the home selling process</h3>
+            <h3>We provide you with options and full control over the home selling process 💪</h3>
             <div className={styles.cards}>
-                <div className={styles.card}><MdOutlineLocalOffer /> <p>Receive a competitive offer on your home.</p></div>
+                <div className={styles.card}><MdPriceCheck /> <p>Receive a competitive & guaranteed offer on your home in 72 hours.</p></div>
                 {/* <BsArrowRightShort /> */}
                 <div className={styles.card}><TbArrowLoopRight2 /><p>Bypass the market. Sidestep showings, open houses, and stress.</p></div>
                 {/* <BsArrowRightShort /> */}
-                <div className={styles.card}><BsSpeedometer2 /><p>Streamline the Sale. Close quickly, and move on to the next chapter of your life.</p></div>
+                <div className={styles.card}><TbHeartHandshake /><p>Streamline the Sale. Close quickly, and move on to the next chapter of your life.</p></div>
             </div>
 
         </div>

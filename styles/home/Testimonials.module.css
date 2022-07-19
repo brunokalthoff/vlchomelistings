@@ -26,7 +26,7 @@
 }
 
 .card {
-    width: 600px;
+    width: 500px;
     border-radius: 2rem;
     box-shadow: 0 0 15px 5px var(--grey1);
     padding: 1.5rem;
@@ -34,7 +34,7 @@
 }
 
 .card h5 {
-    color: var(--blue4);
+    color: var(--grey3);
     margin-top: 2rem;
 }
 

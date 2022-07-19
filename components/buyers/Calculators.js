@@ -12,7 +12,7 @@ function Calculators() {
 
     return (
         <div className={styles.container}>
-            <h2>Use our calculators. <br /> <span>Plan your mortgage, know your costs.</span>
+            <h2>Use our calculators.<span> Know your costs. 🔢</span>
             </h2>
 
             <div className={styles.wrapper}>

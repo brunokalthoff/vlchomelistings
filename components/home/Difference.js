@@ -6,7 +6,7 @@ function Difference() {
     const items = [
         {
             title: "Our Mission",
-            text: <>Our experience, knowledge and communication skills allow us to provide a level of service that is unmatched in our industry. We aim to be industry leaders by creating an authentic experience through honesty and hard work - challenging real estate agents everywhere to a higher level of standard.</>,
+            text: <>We aim to be industry leaders by creating an authentic experience through honesty, hard work, and skill - through challenging real estate agents everywhere to a higher level of standard.  Our experience, knowledge and communication skills allow us to provide a level of service that is unmatched in our industry.</>,
             svg: styles.svg1,
         },
         {
@@ -16,7 +16,7 @@ function Difference() {
         },
         {
             title: "Our Values",
-            text: <>We value the happiness of our clients after we driver what we promised; We value commitment to culture and vision. Most of all, we value our people. Helping people to achieve their goals is not just our job, its our mission. To us, this means providing you with the most amazing and incredible real estate experience you could ever imagine.</>,
+            text: <>We value the happiness of our clients after we deliver what we promised. We value commitment to culture and vision. Most of all, we value our people. Helping people to achieve their goals is not just our job, its our mission. To us, this means providing you with the most amazing and incredible real estate experience you could ever imagine.</>,
             svg: styles.svg3,
         }
     ]
@@ -24,8 +24,8 @@ function Difference() {
     return (
         <>
             <div className={styles.different}>
-                <h2>About us.<br />
-                    <span> What makes Van Leeuwen Real Estate Advisors different?</span>
+                <h2>What makes Van Leeuwen Real Estate Advisors different?<br />
+                    <span> We pride ourselves on delivering an amazing service to our customers.</span>
                 </h2>
             </div>
 

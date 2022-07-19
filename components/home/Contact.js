@@ -3,7 +3,7 @@ import styles from '../../styles/home/Contact.module.css'
 function Contact() {
     return (
         <div className={styles.container}>
-            <h2>Contact us</h2>
+            <h2>Contact us 👋</h2>
             <div className={styles.formWrapper}>
                 <h3>Send a message. <span>We reply within 30 minutes - often sooner, and never automated.</span></h3>
                 <div className={styles.formCardWrapper}><div className={styles.card}>

@@ -4,6 +4,7 @@ import Offer from "../components/sellers/Offer";
 // const Offer = dynamic(() => import('../components/sellers/Offer'), { ssr: false })
 // import Faq from "../components/sellers/Faq";
 const Faq = dynamic(() => import('../components/sellers/Faq'), { ssr: false })
+import ListingsBack from "../components/sellers/ListingsBack";
 
 function Sellers() {
     return (
@@ -11,6 +12,7 @@ function Sellers() {
             <Hero />
             <Offer />
             <Faq />
+            <ListingsBack />
         </>
     );
 }

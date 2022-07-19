@@ -1,6 +1,6 @@
 import styles from '../../styles/buyers/Map.module.css'
-import { useEffect, useState, useMemo } from 'react';
-import { GoogleMap, useLoadScript, MarkerF } from '@react-google-maps/api';
+import { useEffect, useState, useMemo, useContext } from 'react';
+import { GoogleMap, useLoadScript, MarkerF, useGoogleMap } from '@react-google-maps/api';
 import usePlacesAutocomplete, {
     getGeocode,
     getLatLng,
@@ -26,9 +26,10 @@ const icon = {
 const libraries = ["places"]
 
 function Map({ searchResults }) {
+    const map = useGoogleMap()
     const center = useMemo(() => ({ lat: 43.5, lng: -81 }), [])
     const [selected, setSelected] = useState(null);
-
+    const [bounds, setBounds] = useState();
     const [markers, setMarkers] = useState(null);
 
     useEffect(() => {
@@ -46,7 +47,7 @@ function Map({ searchResults }) {
 
             for (const item of searchResults) {
                 const result = await getGeocode({ address: item.adres });
-                const { lat, lng } = await getLatLng(result[0]);
+                const { lat, lng } = getLatLng(result[0]);
                 const newMarker = { title: item.adres, position: { lat: lat, lng: lng } }
                 marks.push(newMarker);
             }
@@ -57,20 +58,42 @@ function Map({ searchResults }) {
         }
     }
 
+    useEffect(() => {
+        if (map) { map.addListener("center_changed", () => {
+            const lat = map.center.lat();
+            const lng = map.center.lng()
+            console.log("lat: ", lat, "lng: ", lng);
+        })
+}
+    }, [map]);
+
+    
+    // const handleDragEnd = map => {
+    //     const bs = map.getBounds();
+    //     setBounds(bs);
+    //     console.log(bs);
+    // }
+
+
+    // const bounds = new window.google.maps.LatLngBounds();
+    // map.fitBounds(bounds);
+
     if (!isLoaded) return <div>Loading...</div>
 
     return (
         <>
+            <GoogleMap zoom={10}
+                center={selected ? selected : center}
+                mapContainerClassName={styles.container}
+                onDragEnd={() => handleDragEnd(mayp)}
 
-
-            <GoogleMap zoom={10} center={selected ? selected : center} mapContainerClassName={styles.container}>
+            >
                 <div className={styles.autocompleteContainer}>
                     <PlacesAutocomplete setSelected={setSelected} />
                 </div>
                 {selected && <MarkerF position={selected} />}
                 {markers && !selected && markers.map((marker, key) => <MarkerF key={key} icon={icon} title={marker.title} position={marker.position}></MarkerF>)}
             </GoogleMap>
-
         </>
     );
 }
@@ -94,8 +117,7 @@ function PlacesAutocomplete({ setSelected }) {
         clearSuggestions();
 
         const results = await getGeocode({ address });
-        console.log(results)
-        const { lat, lng } = await getLatLng(results[0])
+        const { lat, lng } = getLatLng(results[0])
         setSelected({ lat, lng });
     }
 

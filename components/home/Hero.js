@@ -9,8 +9,8 @@ function Hero() {
                      <span> Get a guaranteed offer on your <br /> home in 72 hours.</span>
                 </h1>
                 <div className={styles.buttons}>
-                   <div className={styles.button}><Link href={'/sellers'}><a>Sell home</a></Link></div>
-                   <div className={styles.button}><Link href={'/buyers'}><a>Buy home</a></Link></div>
+                   <div className={styles.button}><Link href={'/sellers'}><a>Sell a home</a></Link></div>
+                   <div className={styles.button}><Link href={'/buyers'}><a>Buy a home</a></Link></div>
                 </div>
             </div>
         </div>

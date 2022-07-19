@@ -4,7 +4,7 @@ function Hero() {
     return (
         <div className={styles.container}>
             <div className={styles.heady}>
-              <div><h1>Find your new home.<span><br />Search our listings.</span></h1></div>
+              <div><h1>Buy your new home<span><br /></span></h1></div>
             </div>
             <div className={styles.heroSvg}></div>
         </div>
