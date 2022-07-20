@@ -4,11 +4,13 @@
   align-items: center;
   justify-content: center;
   margin: var(--sectionSpace) 0 0;
+  flex-direction: column;
 }
 
 .video {
   width: 85%;
-  height: 80vh;
+  height: 50vh;
+  min-height: 15rem;
   background-color: white;
   border-radius: 6rem;
   /* border: 1px solid var(--grey2); */
@@ -19,7 +21,8 @@
   box-shadow: 0 0 10px var(--grey2);
   background-image: url("../../public/video-bg.png");
   background-position: center center;
-  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
   filter: brightness(0.9);
 }
 
@@ -31,4 +34,9 @@
 
 .video svg:hover {
     color: var(--blue2);
+}
+
+.videoWrapper h3 {
+  margin-top: 2rem;
+  color: var(--grey2);
 }

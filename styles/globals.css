@@ -139,21 +139,14 @@ background-repeat: no-repeat; */
     --normaltext: 14px;
     --smalltext: 12px;
     --smallertext: 11px;
-
-    /* Space */
-    --navbarheight: 5rem;
-    --sectionSpace: 4rem;
-    /* Heights */
-    --lineHeightH1: calc(var(--headline1) * 1.5);
-    --lineHeightH2: calc(var(--headline2) * 1.5);
-    --lineHeightH3: calc(var(--headline3) * 1.5);
-    --lineHeightH4: calc(var(--headline4) * 1.5);
-
-    --lineHeightH5: calc(var(--largetext) * 2);
-    --lineHeightP: calc(var(--normaltext) * 2);
-    --lineHeightH6: calc(var(--smalltext) * 2.5);
   }
 }
+
+/* @media screen and (max-width: 600px) {
+  :root {
+    --headline1: 28px;
+  }
+} */
 
 @media screen and (max-width: 450px) {
   :root {

@@ -161,8 +161,8 @@
 }
 
 @media screen and (max-width: 900px) {
-
-  .formWrapper h3, .detailsWrapper h3 {
+  .formWrapper h3,
+  .detailsWrapper h3 {
     text-align: center;
     margin-bottom: 2rem;
   }
@@ -176,4 +176,7 @@
 }
 
 @media screen and (max-width: 450px) {
+  .card {
+    border-radius: 0;
+  }
 }

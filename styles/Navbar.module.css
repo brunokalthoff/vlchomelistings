@@ -1,67 +1,102 @@
 .navbar {
-    width: 100%;
-    height: 5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--black);
-    background: hsla(0, 0%, 100%, 0.8);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-  }
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--black);
+  background: hsla(0, 0%, 100%, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  gap: 1.5rem;
+}
 
+.logo {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links a {
+  margin: 0 1rem;
+  font-size: 16px;
+}
+
+.linksActive {
+  color: var(--blue3);
+}
+
+.links a:last-child {
+  min-width: fit-content;
+  margin: 0 1.5rem;
+  background: var(--buttonPrimary);
+  font-size: var(--largetext);
+  padding: 0.5rem 0.8rem;
+  border-radius: 2rem;
+  letter-spacing: -0.15px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.links a:last-child:hover {
+  background: var(--buttonPrimaryHover);
+}
+
+.links a:last-child svg {
+  vertical-align: middle;
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+  transform: rotate(40deg);
+}
+
+.links a:last-child svg circle {
+  fill: var(--blue4);
+}
+
+.links a:last-child svg g {
+  fill: var(--blue3);
+}
+
+@media screen and (max-width: 900px) {
   .logo {
-    height: 60%;
-    width: 50%;
-    position: relative;
-    margin-left: 1.5rem;
-    cursor: pointer;
-  }
-
-  .links {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin-left: 0.5rem;
   }
 
   .links a {
-    margin: 0 1rem;
-    font-size: 16px;
-  }
-
-  .linksActive {
-    color: var(--blue3);
+    margin: 0 0.5rem;
   }
 
   .links a:last-child {
-    margin: 0 1.5rem;
-    background: var(--buttonPrimary);
-    font-size: var(--largetext);
-    padding: .5rem .8rem;
-    border-radius: 2rem;
-    letter-spacing: -0.15px;
-    font-weight: 700;
-    color: var(--white);
+    margin: 0 1rem;
+    padding: 0.5rem 0.8rem;
   }
+}
 
-  .links a:last-child:hover {
-    background: var(--buttonPrimaryHover);
-  }
-
+@media screen and (max-width: 600px) {
   .links a:last-child svg {
-    vertical-align: middle;
-    font-size: 1.5rem;
-    margin-bottom: .3rem;
-    transform: rotate(40deg);
+    display: none;
+  }
+  .logoText {
+    display: none;
   }
 
-  .links a:last-child svg circle {
-fill: var(--blue4);
+  .logo svg {
+    width: 52px;
   }
+}
 
-  .links a:last-child svg g {
-    fill: var(--blue3);
-      }
+@media screen and (max-width: 450px) {
+}

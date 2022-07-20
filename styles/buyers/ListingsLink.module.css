@@ -22,7 +22,7 @@
   .button {
     width: fit-content;
     background: var(--buttonPrimary);
-    padding: 1rem;
+    padding: .8rem 1rem;
     border-radius: 2rem;
     margin-right: 1rem;
     color: var(--white);
@@ -37,4 +37,20 @@
   
   .button:hover {
     background: var(--buttonPrimaryHover);
+  }
+  
+  .button a svg {
+    margin-left: .5rem;
+    vertical-align: middle;
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+    transform: rotate(40deg);
+  }
+  
+  .button a svg circle {
+    fill: var(--blue4);
+  }
+  
+  .button a svg g {
+    fill: var(--blue3);
   }

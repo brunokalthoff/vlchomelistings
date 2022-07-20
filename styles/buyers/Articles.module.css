@@ -5,7 +5,6 @@
   align-items: center;
   padding: 0 2rem 4rem;
   position: relative;
-
 }
 
 .scrollTo {
@@ -15,7 +14,8 @@
 
 .container h2 {
   width: 100%;
-  padding: 0 2rem;
+  min-width: 200px;
+  padding: 0 1rem;
   margin-top: 4rem;
   text-align: center;
 }
@@ -30,6 +30,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: var(--sectionSpace);
+  width: 100%;
   max-width: 1000px;
   margin-top: 4rem;
 }
@@ -71,3 +72,17 @@
   text-decoration: underline;
 }
 
+@media screen and (max-width: 900px) {
+}
+
+@media screen and (max-width: 450px) {
+  .article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 100%;
+    min-width: 200px;
+    text-align: center;
+  }
+}
