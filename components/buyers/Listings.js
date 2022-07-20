@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styles from '../../styles/buyers/Listings.module.css'
 import Map from './Map'
 import { CgBell, CgOptions } from 'react-icons/cg';

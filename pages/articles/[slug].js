@@ -91,14 +91,14 @@ function Article() {
     const router = useRouter();
     const { slug } = router.query;
 
-    const { svg } = articles.find(article => {
-        return article.slug === slug;
-    })
-    console.log(svg)
-
     return (
         <div className={styles.container}>
-            <Hero svg={svg} />
+
+{slug === articles[0].slug && <Hero svg={articles[0].svg} /> }
+{slug === articles[1].slug && <Hero svg={articles[1].svg} /> }
+{slug === articles[2].slug && <Hero svg={articles[2].svg} /> }
+{slug === articles[3].slug && <Hero svg={articles[3].svg} /> }
+
             <GoBack />
 
             <div className={styles.articleWrapper}>
