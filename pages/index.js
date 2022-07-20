@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic'
 import Hero from '../components/home/Hero'
 import Video from '../components/home/Video';
 // import Difference from '../components/home/difference';
-const Difference = dynamic(() => import('../components/home/difference'), { ssr: false })
+const Difference = dynamic(() => import('../components/home/Difference'), { ssr: false })
 import ForSellersBuyers from '../components/home/ForSellersBuyers';
 // const ForSellersBuyers = dynamic(() => import('../components/home/ForSellersBuyers'), { ssr: false })
 // import Testimonials from '../components/home/Testimonials';
