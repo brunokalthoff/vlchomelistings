@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import Hero from '../components/home/Hero'
-import Video from '../components/home/video';
+import Video from '../components/home/Video';
 // import Difference from '../components/home/difference';
 const Difference = dynamic(() => import('../components/home/difference'), { ssr: false })
 import ForSellersBuyers from '../components/home/ForSellersBuyers';
