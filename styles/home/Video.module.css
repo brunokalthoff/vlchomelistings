@@ -9,7 +9,7 @@
 
 .video {
   width: 85%;
-  height: 50vh;
+  height: 80vh;
   min-height: 15rem;
   background-color: white;
   border-radius: 6rem;
@@ -34,9 +34,4 @@
 
 .video svg:hover {
     color: var(--blue2);
-}
-
-.videoWrapper h3 {
-  margin-top: 2rem;
-  color: var(--grey2);
 }

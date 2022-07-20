@@ -7,7 +7,6 @@ function Video() {
             <div className={styles.video}>
                 <IoPlay />
             </div>
-            <h3>Video coming soon</h3>
         </div>
     );
 }
