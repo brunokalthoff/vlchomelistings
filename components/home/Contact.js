@@ -11,9 +11,6 @@ function Contact() {
         e.preventDefault();
         setSent(true);
         let formData = new FormData(formRef.current);
-        for (const value of formData.values()) {
-            console.log(value);
-          }
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -24,7 +21,7 @@ function Contact() {
                 console.log("Form successfully submitted");
                 formRef.current.reset();
             })
-            .catch((error) => alert(error));
+            .catch((error) => console.log(error));
     };
 
     return (
