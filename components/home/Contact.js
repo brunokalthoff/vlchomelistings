@@ -22,7 +22,7 @@ const [sent, setSent] = useState(false);
             <div className={styles.formWrapper}>
                 <h3>Send a message. <span>We reply within 30 minutes - often sooner, and never automated.</span></h3>
                 <div className={styles.formCardWrapper}><div className={styles.card}>
-                    <form onSubmit={handleSubmit} className={styles.form} name="Contact" netlify>
+                    <form onSubmit={handleSubmit} className={styles.form} name="Contact" data-netlify="true" method="POST">
                         <div className={styles.input}><label htmlFor="name">Name*</label><input name='name' type="text" required /></div>
                         <div className={styles.doubleInput}><div className={styles.input}><label htmlFor="email">Email*</label><input name='email' type="email" required /></div><div className={styles.input}><label htmlFor="phone">Phone</label><input name='phone' type="text" /></div></div>
                         <div className={styles.input}><label htmlFor="note">Note*</label><textarea name="note" rows="4" required></textarea></div>
