@@ -17,8 +17,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>VanLuewen RE Advisors</title>
-        <meta name="description" content="VanLuewen Real Estate Home Advisors Consultancy" />
+        <title>Van Leeuwen Real Estate Advisors</title>
+        <meta name="description" content="Welcome to Van Leeuwen Real Estate Advisors Consultancy. Looking to buy a new home? Or Get a guaranteed offer on your home in 72 hours!" />
         <link rel="icon" href="/favicon.ico" />
 
       </Head>

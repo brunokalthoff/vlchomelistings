@@ -4,18 +4,19 @@ import contactJerry from '../../public/contact-jerry.png'
 import { TbHeartHandshake } from 'react-icons/tb';
 import { MdPriceCheck, MdSpeed } from 'react-icons/md';
 import { TbArrowLoopRight2 } from 'react-icons/tb';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 
 function Offer() {
+    const formRef = useRef();
     const [sent, setSent] = useState(false);
 
     const handleSubmit = e => {
         e.preventDefault();
         setSent(true);
         setTimeout(() => {
-            e.target.reset();
+            formRef.current.reset();
             setSent(false);
         }, 2000);
     }
@@ -29,8 +30,8 @@ function Offer() {
 
             <div className={styles.formWrapper}>
 
-                <form onSubmit={handleSubmit} name='Request Offer' className={styles.form} data-netlify="true" method="POST">
-                <input type="hidden" name="form-name" value="Request Offer" />
+                <form ref={formRef} name='Request Offer' className={styles.form} data-netlify="true" method="POST">
+                    <input type="hidden" name="form-name" value="Request Offer" />
                     <label htmlFor="name">Name*<input type="text" id='name' required /></label>
                     <div className={styles.doubleInput}><label htmlFor="text">Email*<input type="text" id="email" name='email' required /></label>
                         <label htmlFor="phone">Phone<input type="text" id='phone' name='phone' /></label></div>
@@ -45,7 +46,7 @@ function Offer() {
                             <option value="<6 + months">6+ months</option>
                         </select></label>
 
-                    <button type='submit'>
+                    <button onClick={handleSubmit} type='submit'>
                         {sent && <motion.div animate={{ rotate: 720 }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }}><AiOutlineLoading3Quarters /></motion.div>}
                         Get offer
                     </button>
