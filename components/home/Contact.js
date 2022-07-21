@@ -4,17 +4,16 @@ import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 
 function Contact() {
-    // const formRef = useRef();
+    const formRef = useRef();
     const [sent, setSent] = useState(false);
 
-    // const handleSubmit = e => {
-    //     e.preventDefault();
-    //     setSent(true);
-    //     setTimeout(() => {
-    //         formRef.current.reset();
-    //         setSent(false);
-    //     }, 2000);
-    // }
+    const handleSubmit = e => {
+        setSent(true);
+        setTimeout(() => {
+            formRef.current.reset();
+            setSent(false);
+        }, 2000);
+    }
 
 
     return (
@@ -23,12 +22,12 @@ function Contact() {
             <div className={styles.formWrapper}>
                 <h3>Send a message. <span>We reply within 30 minutes - often sooner, and never automated.</span></h3>
                 <div className={styles.formCardWrapper}><div className={styles.card}>
-                    <form action='/success' className={styles.form} name="Contact" data-netlify="true" method="POST">
+                    <form action='/' className={styles.form} name="Contact" data-netlify="true" method="POST">
                         <input type="hidden" name="form-name" value="Contact" />
                         <div className={styles.input}><label htmlFor="name">Name*</label><input name='name' type="text" required /></div>
                         <div className={styles.doubleInput}><div className={styles.input}><label htmlFor="email">Email*</label><input name='email' type="email" required /></div><div className={styles.input}><label htmlFor="phone">Phone</label><input name='phone' type="text" /></div></div>
                         <div className={styles.input}><label htmlFor="note">Note*</label><textarea name="note" rows="4" required></textarea></div>
-                        <button className={styles.button} type='submit' >
+                        <button onClick={handleSubmit} className={styles.button} type='submit' >
                             {sent && <motion.div animate={{ rotate: 720 }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }}><AiOutlineLoading3Quarters /></motion.div>}
                             Send
                         </button>
