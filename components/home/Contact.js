@@ -7,14 +7,25 @@ function Contact() {
     const formRef = useRef();
     const [sent, setSent] = useState(false);
 
-    const handleSubmit = e => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
         setSent(true);
-        setTimeout(() => {
-            formRef.current.reset();
-            setSent(false);
-        }, 2000);
-    }
-
+        let formData = new FormData(formRef.current);
+        for (const value of formData.values()) {
+            console.log(value);
+          }
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+        })
+            .then(() => {
+                setSent(false);
+                console.log("Form successfully submitted");
+                formRef.current.reset();
+            })
+            .catch((error) => alert(error));
+    };
 
     return (
         <div className={styles.container}>
@@ -22,12 +33,12 @@ function Contact() {
             <div className={styles.formWrapper}>
                 <h3>Send a message. <span>We reply within 30 minutes - often sooner, and never automated.</span></h3>
                 <div className={styles.formCardWrapper}><div className={styles.card}>
-                    <form action='/' className={styles.form} name="Contact" data-netlify="true" method="POST">
+                    <form onSubmit={handleSubmit} ref={formRef} className={styles.form} name="Contact" data-netlify="true" method="POST">
                         <input type="hidden" name="form-name" value="Contact" />
                         <div className={styles.input}><label htmlFor="name">Name*</label><input name='name' type="text" required /></div>
                         <div className={styles.doubleInput}><div className={styles.input}><label htmlFor="email">Email*</label><input name='email' type="email" required /></div><div className={styles.input}><label htmlFor="phone">Phone</label><input name='phone' type="text" /></div></div>
                         <div className={styles.input}><label htmlFor="note">Note*</label><textarea name="note" rows="4" required></textarea></div>
-                        <button onClick={handleSubmit} className={styles.button} type='submit' >
+                        <button className={styles.button} type='submit' >
                             {sent && <motion.div animate={{ rotate: 720 }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }}><AiOutlineLoading3Quarters /></motion.div>}
                             Send
                         </button>
