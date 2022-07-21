@@ -29,7 +29,8 @@ function Offer() {
 
             <div className={styles.formWrapper}>
 
-                <form onSubmit={handleSubmit} name='request-offer' className={styles.form} data-netlify="true" method="POST">
+                <form onSubmit={handleSubmit} name='Request Offer' className={styles.form} data-netlify="true" method="POST">
+                <input type="hidden" name="form-name" value="Request Offer" />
                     <label htmlFor="name">Name*<input type="text" id='name' required /></label>
                     <div className={styles.doubleInput}><label htmlFor="text">Email*<input type="text" id="email" name='email' required /></label>
                         <label htmlFor="phone">Phone<input type="text" id='phone' name='phone' /></label></div>
