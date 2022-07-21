@@ -33,6 +33,11 @@
     letter-spacing: -0.1px;
     cursor: pointer;
     transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    gap: .5rem;
   }
   
   .button:hover {
@@ -40,7 +45,6 @@
   }
   
   .button a svg {
-    margin-left: .5rem;
     vertical-align: middle;
     font-size: 2rem;
     margin-bottom: 0.3rem;

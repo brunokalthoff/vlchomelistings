@@ -153,15 +153,5 @@ background-repeat: no-repeat; */
     /* Heights */
     --navbarheight: 5rem;
     --sectionSpace: 3rem;
-
-    --lineHeightH1: calc(var(--headline1) * 1.5);
-    --lineHeightH2: calc(var(--headline2) * 1.5);
-    --lineHeightH3: calc(var(--headline3) * 1.5);
-    --lineHeightH4: calc(var(--headline4) * 1.5);
-
-    --lineHeightH5: calc(var(--largetext) * 2);
-    --lineHeightP: calc(var(--normaltext) * 2);
-    --lineHeightH6: calc(var(--smalltext) * 2.5);
-    /* --lineHeightP: 30px; */
   }
 }

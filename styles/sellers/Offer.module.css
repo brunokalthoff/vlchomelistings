@@ -25,6 +25,28 @@
   margin-top: var(--sectionSpace);
 }
 
+.success {
+  margin-top: 2rem;
+  color: green;
+  border: solid var(--green);
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  border: 2px solid;
+
+}
+
+.close {
+  cursor: pointer;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .form {
   width: 400px;
   background: var(--white);
@@ -87,7 +109,7 @@
   border-bottom: 2px solid var(--blue1);
 }
 
-.form button {
+.button {
   background: var(--buttonPrimary);
   border-style: none;
   width: 40%;
@@ -97,9 +119,26 @@
   color: var(--white);
   font-weight: 700;
   font-size: var(--largetext);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--buttonPrimaryHover);
+}
+
+.button div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
 }
 
 .container h3 {
+  color: var(--grey2);
   width: 100%;
   text-align: center;
   margin-top: var(--sectionSpace);
@@ -129,7 +168,7 @@
 
 .card svg {
   font-size: 5rem;
-  color: var(--grey2);
+  color: var(--grey3);
   padding: 0;
 }
 

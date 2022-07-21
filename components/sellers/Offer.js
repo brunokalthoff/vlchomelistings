@@ -5,21 +5,35 @@ import { TbHeartHandshake } from 'react-icons/tb';
 import { MdPriceCheck, MdSpeed } from 'react-icons/md';
 import { TbArrowLoopRight2 } from 'react-icons/tb';
 import { useRef, useState } from 'react';
-import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import { AiOutlineLoading3Quarters, AiFillCloseCircle } from 'react-icons/ai';
 import { motion } from 'framer-motion';
+import { RiCloseCircleLine } from 'react-icons/ri';
+
+
 
 function Offer() {
     const formRef = useRef();
-    const [sent, setSent] = useState(false);
+    const [sending, setSending] = useState(false);
+    const [sent, setSent] = useState();
 
-    const handleSubmit = e => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        setSent(true);
-        setTimeout(() => {
-            formRef.current.reset();
-            setSent(false);
-        }, 2000);
-    }
+        setSending(true);
+        let formData = new FormData(formRef.current);
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+        })
+            .then(() => {
+                setSending(false);
+                setSent('success');
+                formRef.current.reset();
+            })
+            .catch((error) => {
+                setSent('error');
+            });
+    };
 
 
     return (
@@ -46,8 +60,8 @@ function Offer() {
                             <option value="<6 + months">6+ months</option>
                         </select></label>
 
-                    <button onClick={handleSubmit} type='submit'>
-                        {sent && <motion.div animate={{ rotate: 720 }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }}><AiOutlineLoading3Quarters /></motion.div>}
+                    <button className={styles.button} onClick={handleSubmit} type='submit'>
+                        {sending && <motion.div animate={{ rotate: 720 }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }}><AiOutlineLoading3Quarters /></motion.div>}
                         Get offer
                     </button>
                 </form>
@@ -55,13 +69,13 @@ function Offer() {
                     <Image src={contactJerry} alt='' /></div>
 
             </div>
-
+            {sent && <div style={sent === "error" ? { color: 'salmon', border: 'solid salmon' } : {}} className={styles.success}>{sent === "success" ? 'Your request has been sent!' : 'There was an error sending this form. Please contact us direct via our contact details below. Thank you!'} <span className={styles.close} onClick={() => setSent(false)}> <RiCloseCircleLine /> </span> </div>}
             <h3>We provide you with options and full control over the home selling process</h3>
             <div className={styles.cards}>
                 <div className={styles.card}><MdPriceCheck /> <p>Receive a competitive & guaranteed offer on your home in 72 hours.</p></div>
-                {/* <BsArrowRightShort /> */}
+
                 <div className={styles.card}><TbArrowLoopRight2 /><p>Bypass the market. Sidestep showings, open houses, and stress.</p></div>
-                {/* <BsArrowRightShort /> */}
+
                 <div className={styles.card}><TbHeartHandshake /><p>Streamline the Sale. Close quickly, and move on to the next chapter of your life.</p></div>
             </div>
 
