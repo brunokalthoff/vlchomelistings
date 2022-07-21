@@ -97,8 +97,9 @@
 }
 
 .input textarea:focus {
-  border: 2px solid var(--blue1);
-  border-radius: 0.5rem;
+  border-bottom: 2px solid var(--blue1);
+  background: var(--grey1);
+  border-radius: 0.5rem 0.5rem 0 0;
   padding: 0.5rem;
 }
 
@@ -107,7 +108,7 @@
   outline: none;
 }
 
-.form button {
+.button {
   background: var(--buttonPrimary);
   border-style: none;
   width: 40%;
@@ -117,10 +118,22 @@
   color: var(--white);
   font-weight: 700;
   font-size: var(--largetext);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
 }
 
-.form button:hover {
+.button:hover {
   background: var(--buttonPrimaryHover);
+}
+
+.button div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
 }
 
 .details {
