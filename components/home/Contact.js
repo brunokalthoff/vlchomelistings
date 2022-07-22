@@ -2,14 +2,16 @@ import styles from '../../styles/home/Contact.module.css'
 import { useRef, useState } from 'react';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { motion } from 'framer-motion';
+import { BsCheck2All } from 'react-icons/bs';
 
 function Contact() {
     const formRef = useRef();
+    const [sending, setSending] = useState(false);
     const [sent, setSent] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = e => {
         e.preventDefault();
-        setSent(true);
+        setSending(true);
         let formData = new FormData(formRef.current);
         fetch("/", {
             method: "POST",
@@ -17,9 +19,10 @@ function Contact() {
             body: new URLSearchParams(formData).toString(),
         })
             .then(() => {
-                setSent(false);
+                setSending(false);
                 console.log("Form successfully submitted");
                 formRef.current.reset();
+                setSent(true);
             })
             .catch((error) => console.log(error));
     };
@@ -30,16 +33,20 @@ function Contact() {
             <div className={styles.formWrapper}>
                 <h3>Send a message. <span>We reply within 30 minutes - often sooner, and never automated.</span></h3>
                 <div className={styles.formCardWrapper}><div className={styles.card}>
-                    <form onSubmit={handleSubmit} ref={formRef} className={styles.form} name="Contact" data-netlify="true" method="POST">
+                    {!sent && <form onSubmit={handleSubmit} ref={formRef} className={styles.form} name="Contact" data-netlify="true" method="POST">
                         <input type="hidden" name="form-name" value="Contact" />
                         <div className={styles.input}><label htmlFor="name">Name*</label><input name='name' type="text" required /></div>
                         <div className={styles.doubleInput}><div className={styles.input}><label htmlFor="email">Email*</label><input name='email' type="email" required /></div><div className={styles.input}><label htmlFor="phone">Phone</label><input name='phone' type="text" /></div></div>
                         <div className={styles.input}><label htmlFor="note">Note*</label><textarea name="note" rows="4" required></textarea></div>
                         <button className={styles.button} type='submit' >
-                            {sent && <motion.div animate={{ rotate: 720 }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }}><AiOutlineLoading3Quarters /></motion.div>}
+                            {sending && <motion.div animate={{ rotate: 720 }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }}><AiOutlineLoading3Quarters /></motion.div>}
                             Send
                         </button>
-                    </form>
+                    </form>}
+                    {sent && <div className={styles.success}>
+<BsCheck2All size={32} /> <p>Your message has been sent. Thank you!</p>
+<button onClick={()=>setSent(false)}>OK!<span> 🥳</span></button>
+                    </div>}
                 </div>
                 </div>
             </div>

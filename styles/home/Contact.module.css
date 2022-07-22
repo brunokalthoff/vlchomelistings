@@ -58,6 +58,38 @@
   border-radius: 3rem;
 }
 
+.success {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--green);
+  color: green;
+  border-radius: inherit;
+}
+
+.success button {
+  border-radius: 2rem;
+  margin-top: 2rem;
+  color: var(--grey3);
+  background: var(--white);
+  padding: .8rem;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.success button span {
+  font-size: 1.2rem;
+  
+}
+
+.success button:hover {
+  background: var(--grey1);
+  color: var(--black);
+}
+
 .form {
   max-height: 100%;
   max-width: 100%;
@@ -122,7 +154,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .button:hover {
@@ -189,7 +221,10 @@
 }
 
 @media screen and (max-width: 450px) {
+  
   .card {
     border-radius: 0;
+    min-width: 100vw;
+    height: 100%;
   }
 }

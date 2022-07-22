@@ -5,18 +5,18 @@ import { TbHeartHandshake } from 'react-icons/tb';
 import { MdPriceCheck, MdSpeed } from 'react-icons/md';
 import { TbArrowLoopRight2 } from 'react-icons/tb';
 import { useRef, useState } from 'react';
-import { AiOutlineLoading3Quarters, AiFillCloseCircle } from 'react-icons/ai';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { motion } from 'framer-motion';
-import { RiCloseCircleLine } from 'react-icons/ri';
+import { BsCheck2All } from 'react-icons/bs';
 
 
 
 function Offer() {
     const formRef = useRef();
     const [sending, setSending] = useState(false);
-    const [sent, setSent] = useState();
+    const [sent, setSent] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = e => {
         e.preventDefault();
         setSending(true);
         let formData = new FormData(formRef.current);
@@ -27,11 +27,11 @@ function Offer() {
         })
             .then(() => {
                 setSending(false);
-                setSent('success');
                 formRef.current.reset();
+                setSent(true);
             })
             .catch((error) => {
-                setSent('error');
+                console.log(error);
             });
     };
 
@@ -44,32 +44,36 @@ function Offer() {
 
             <div className={styles.formWrapper}>
 
-                <form ref={formRef} name='Request Offer' className={styles.form} data-netlify="true" method="POST">
-                    <input type="hidden" name="form-name" value="Request Offer" />
-                    <label htmlFor="name">Name*<input type="text" id='name' required /></label>
-                    <div className={styles.doubleInput}><label htmlFor="text">Email*<input type="text" id="email" name='email' required /></label>
-                        <label htmlFor="phone">Phone<input type="text" id='phone' name='phone' /></label></div>
-                    <label htmlFor="address">Adress*<input type="text" id='address' name='address' required /></label>
-                    <label htmlFor="reason">Why are you selling your home?<textarea id="reason" rows="5" name='reason'></textarea></label>
-                    <label htmlFor="move">When do you plan on moving?
-                        <select id="move" name='move'>
-                            <option selected disabled>Select your option</option>
-                            <option value="0 - 1 month">0 - 1 month</option>
-                            <option value="1 - 3 months">1 - 3 months</option>
-                            <option value="<3 - 6 months">3 - 6 months</option>
-                            <option value="<6 + months">6+ months</option>
-                        </select></label>
+                <form onSubmit={handleSubmit} style={sent ? {background: 'var(--green)'} : {}} ref={formRef} name='Request Offer' className={styles.form} data-netlify="true" method="POST">
+                    {!sent && <> <input type="hidden" name="form-name" value="Request Offer" />
+                        <label htmlFor="name">Name*<input type="text" id='name' required /></label>
+                        <div className={styles.doubleInput}><label htmlFor="text">Email*<input type="email" id="email" name='email' required /></label>
+                            <label htmlFor="phone">Phone<input type="text" id='phone' name='phone' /></label></div>
+                        <label htmlFor="address">Adress*<input type="text" id='address' name='address' required /></label>
+                        <label htmlFor="reason">Why are you selling your home?<textarea id="reason" rows="5" name='reason'></textarea></label>
+                        <label htmlFor="move">When do you plan on moving?
+                            <select id="move" name='move'>
+                                <option selected disabled>Select your option</option>
+                                <option value="0 - 1 month">0 - 1 month</option>
+                                <option value="1 - 3 months">1 - 3 months</option>
+                                <option value="<3 - 6 months">3 - 6 months</option>
+                                <option value="<6 + months">6+ months</option>
+                            </select></label>
 
-                    <button className={styles.button} onClick={handleSubmit} type='submit'>
-                        {sending && <motion.div animate={{ rotate: 720 }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }}><AiOutlineLoading3Quarters /></motion.div>}
-                        Get offer
-                    </button>
+                        <button className={styles.button} type='submit'>
+                            {sending && <motion.div animate={{ rotate: 720 }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }}><AiOutlineLoading3Quarters /></motion.div>}
+                            Get offer
+                        </button>
+                    </>}
+                    {sent && <div className={styles.success}>
+                        <BsCheck2All size={32} /> <p>Your message has been sent. Thank you!</p>
+                        <button onClick={() => setSent(false)}>OK!<span> 🥳</span></button>
+                    </div>}
                 </form>
+
                 <div className={styles.img}>
                     <Image src={contactJerry} alt='' /></div>
-
             </div>
-            {sent && <div style={sent === "error" ? { color: 'salmon', border: 'solid salmon' } : {}} className={styles.success}>{sent === "success" ? 'Your request has been sent!' : 'There was an error sending this form. Please contact us direct via our contact details below. Thank you!'} <span className={styles.close} onClick={() => setSent(false)}> <RiCloseCircleLine /> </span> </div>}
             <h3>We provide you with options and full control over the home selling process</h3>
             <div className={styles.cards}>
                 <div className={styles.card}><MdPriceCheck /> <p>Receive a competitive & guaranteed offer on your home in 72 hours.</p></div>

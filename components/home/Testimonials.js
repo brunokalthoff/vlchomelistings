@@ -81,11 +81,7 @@ function Testimonials() {
 
                 He walked us through the process of getting our house on the market quickly and at an appropriate asking price. He was able to arrange a qualified pre-inspection of our property and an efficient, professional staging consultation.
 
-                We sold our townhouse in under 72 hours for more than $20,000 over our asking price!
-
-                We can&apos;t thank Jerry enough for his professionalism and excellent work finding us a great home in our budget and selling our house so quickly! We will definitely be recommending him to family and friends!
-
-                - Cam and Jennifer</>,
+                We sold our townhouse in under 72 hours for more than $20,000 over our asking price!</>,
         },
 
    
@@ -186,8 +182,6 @@ function Testimonials() {
             text: <>Graham was amazing, This was our first time buying a home. The experience was still daunting in terms of the decisions we had to make along the way, however, Graham had always assisted us in putting things in perspective and helping us to figure out what would work best for our first family home.
 
                 My partner and I had a short window to search for a home, in which we didn&apos;t even think would be possible. Graham was always available to take on our questions, squeeze us into showings and even assist with the closing details and connecting us with a reputable home inspector.
-
-                I couldn&apos;t thank Graham enough for all the hard work and support he had given us through this process.
             </>,
         },
         {
@@ -206,7 +200,7 @@ function Testimonials() {
             name: <>Karen Colalillo</>,
 
 
-            text: <>The Van Leeuwen Real Estate group were instrumental in finding our new home here in Kitchener.  Working with Graham Little was education as well as the reason we were able to find a home...his experience with the areas we looked was helpful in determining if the home was right for us...he gave us his expert opinion and was not afraid to tell us whether we should put an offer in or not; he did not try to sell a home, he tried to find us the perfect home for us...and he did.  He continues to keep in touch with us regarding any issues or assistance we may need for our new home.  Everyone as noted has been instrumental in helping us find our home...you have all gone over and above  what was expected.  We would not have found the perfect home without Graham...thanks.</>,
+            text: <>The Van Leeuwen Real Estate group were instrumental in finding our new home here in Kitchener.  Working with Graham Little was education as well as the reason we were able to find a home...his experience with the areas we looked was helpful in determining if the home was right for us...he gave us his expert opinion and was not afraid to tell us whether we should put an offer in or not; he did not try to sell a home, he tried to find us the perfect home for us...and he did.  He continues to keep in touch with us regarding any issues or assistance we may need for our new home.</>,
         },
         {
             name: <>Mehrdad Pirnia</>,
@@ -281,7 +275,7 @@ function Testimonials() {
             name: <>Lynn & Maurice Landriault</>,
 
 
-            text: <>My husband and I had the privilege of working with Graham Little as our advisor. Having never bought or sold a home, Graham facilitated our move from Northern Ontario to Southern Ontario with patience, sensitivity and professionalism. We knew we were in very competent hands. After many months and several trips, we found our perfect home. Once our purchase was finalized, we had the pleasure of meeting&apos; Jody. No request or question was too much for her to address in a very friendly, timely manner. We would not hesitate to contact Van Leeuwen Real Estate Advisors for future real estate needs. Thank you!</>,
+            text: <>My husband and I had the privilege of working with Graham Little as our advisor. Having never bought or sold a home, Graham facilitated our move from Northern Ontario to Southern Ontario with patience, sensitivity and professionalism. We knew we were in very competent hands. After many months and several trips, we found our perfect home. We would not hesitate to contact Van Leeuwen Real Estate Advisors for future real estate needs. Thank you!</>,
         },
         {
             name: <>Wesley Greenwood</>,
@@ -362,7 +356,7 @@ function Testimonials() {
             name: <>Deb Stack</>,
 
 
-            text: <>This is a thank you note to Jerry for his hard work in making our forever home possible. We appreciated his promptness with numerous scenarios. he totally understands customer service and delivered on that. His eye for detail and advisement to us whenever required, made our days through this process very smooth. There were lots of bumps, but we felt that he had our backs; that is a lot. We will definitely recommend  Jerry and wish him all the best in his endeavors.</>,
+            text: <>This is a thank you note to Jerry for his hard work in making our forever home possible. He totally understands customer service and delivered on that. His eye for detail and advisement to us whenever required, made our days through this process very smooth. There were lots of bumps, but we felt that he had our backs; that is a lot. We will definitely recommend  Jerry and wish him all the best in his endeavors.</>,
         },
         {
             name: <>Caroline Aweh</>,
