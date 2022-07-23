@@ -13,6 +13,8 @@ import {
     ComboboxOption,
 } from "@reach/combobox";
 import "@reach/combobox/styles.css";
+import dotenv from 'dotenv'
+dotenv.config()
 
 
 const libraries = ["places"]
