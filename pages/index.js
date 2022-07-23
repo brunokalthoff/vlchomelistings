@@ -6,8 +6,8 @@ import Video from '../components/home/Video';
 const Difference = dynamic(() => import('../components/home/Difference'), { ssr: false })
 import ForSellersBuyers from '../components/home/ForSellersBuyers';
 // const ForSellersBuyers = dynamic(() => import('../components/home/ForSellersBuyers'), { ssr: false })
-import Testimonials from '../components/home/Testimonials';
-// const Testimonials = dynamic(() => import('../components/home/Testimonials'), { ssr: false })
+// import Testimonials from '../components/home/Testimonials';
+const Testimonials = dynamic(() => import('../components/home/Testimonials'), { ssr: false })
 // import Team from '../components/home/Team';
 const Team = dynamic(() => import('../components/home/Team'), { ssr: false })
 import Contact from '../components/home/Contact';

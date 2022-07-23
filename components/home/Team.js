@@ -103,7 +103,7 @@ function Team() {
                             }
                         }}
 
-                    > <Image src={images[imageIndex]} alt={images[imageIndex].toString()} /></ motion.div>
+                    > <Image src={images[imageIndex]} alt={images[imageIndex].toString()} priority={true} /></ motion.div>
 
                 </AnimatePresence>
             </div>
@@ -112,7 +112,7 @@ function Team() {
                 <div className={styles.prev} onClick={() => paginate(-1)}>
                     {"‣"}
                 </div>
-                <div className={styles.pagis}>{images.map((item, key) => <div className={ imageIndex === key ? `${styles.balls} ${styles.ballsActive}` : styles.balls} key={key}></div>)}</div>
+                <div className={styles.pagis}>{images.map((item, key) => <div className={imageIndex === key ? `${styles.balls} ${styles.ballsActive}` : styles.balls} key={key}></div>)}</div>
                 <div className={styles.next} onClick={() => paginate(1)}>
                     {"‣"}
                 </div>
