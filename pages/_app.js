@@ -11,9 +11,9 @@ import "@fontsource/poppins/800.css"
 import "@fontsource/poppins/900.css"
 import Layout from '../components/Layout'
 
-export function reportWebVitals(metric) {
-  console.log(metric)
-}
+// export function reportWebVitals(metric) {
+//   console.log(metric)
+// }
 
 function MyApp({ Component, pageProps }) {
 

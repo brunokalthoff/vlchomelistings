@@ -20,7 +20,6 @@ function Contact() {
         })
             .then(() => {
                 setSending(false);
-                console.log("Form successfully submitted");
                 formRef.current.reset();
                 setSent(true);
             })
@@ -43,10 +42,10 @@ function Contact() {
                             Send
                         </button>
                     </form>}
-                    {sent && <div className={styles.success}>
-<BsCheck2All size={32} /> <p>Your message has been sent. Thank you!</p>
-<button onClick={()=>setSent(false)}>OK!<span> 🥳</span></button>
-                    </div>}
+                    {sent && <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: .5, duration: .5 }} className={styles.success}>
+                        <BsCheck2All size={32} /> <p>Your message has been sent. Thank you!</p>
+                        <button onClick={() => setSent(false)}>OK!<span> 🥳</span></button>
+                    </motion.div>}
                 </div>
                 </div>
             </div>

@@ -8,13 +8,14 @@ import { useRef, useState } from 'react';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { BsCheck2All } from 'react-icons/bs';
-
+import AddressInput from './AddressInput';
 
 
 function Offer() {
     const formRef = useRef();
     const [sending, setSending] = useState(false);
     const [sent, setSent] = useState(false);
+    const [selected, setSelected] = useState(null);
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -28,6 +29,7 @@ function Offer() {
             .then(() => {
                 setSending(false);
                 formRef.current.reset();
+                setSelected('');
                 setSent(true);
             })
             .catch((error) => {
@@ -44,12 +46,13 @@ function Offer() {
 
             <div className={styles.formWrapper}>
 
-                <form onSubmit={handleSubmit} style={sent ? {background: 'var(--green)'} : {}} ref={formRef} name='Request Offer' className={styles.form} data-netlify="true" method="POST">
+                <form onSubmit={handleSubmit} style={sent ? { background: 'var(--green)' } : {}} ref={formRef} name='Request Offer' className={styles.form} data-netlify="true" method="POST">
                     {!sent && <> <input type="hidden" name="form-name" value="Request Offer" />
-                        <label htmlFor="name">Name*<input type="text" id='name' required /></label>
+                        <label htmlFor="name">Name*<input type="text" id='name' name='name' required /></label>
                         <div className={styles.doubleInput}><label htmlFor="text">Email*<input type="email" id="email" name='email' required /></label>
                             <label htmlFor="phone">Phone<input type="text" id='phone' name='phone' /></label></div>
-                        <label htmlFor="address">Adress*<input type="text" id='address' name='address' required /></label>
+                        <label htmlFor="address">Address*<input type="text" id='address' name='address' value={selected} hidden /> <AddressInput setSelected={setSelected} /> </label>
+
                         <label htmlFor="reason">Why are you selling your home?<textarea id="reason" rows="5" name='reason'></textarea></label>
                         <label htmlFor="move">When do you plan on moving?
                             <select id="move" name='move'>
@@ -65,10 +68,10 @@ function Offer() {
                             Get offer
                         </button>
                     </>}
-                    {sent && <div className={styles.success}>
+                    {sent && <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: .5, duration: .5 }} className={styles.success}>
                         <BsCheck2All size={32} /> <p>Your message has been sent. Thank you!</p>
                         <button onClick={() => setSent(false)}>OK!<span> 🥳</span></button>
-                    </div>}
+                    </motion.div>}
                 </form>
 
                 <div className={styles.img}>
