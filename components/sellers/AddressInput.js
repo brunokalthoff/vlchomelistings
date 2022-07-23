@@ -20,7 +20,7 @@ const libraries = ["places"]
 function AddressInput({ setSelected }) {
 
     const { isLoaded } = useLoadScript({
-        googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API,
+        googleMapsApiKey: process.env.GOOGLE_MAPS_API,
         libraries: libraries,
     })
 
