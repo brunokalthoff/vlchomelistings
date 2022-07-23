@@ -103,7 +103,7 @@ function Team() {
                             }
                         }}
 
-                    > <Image src={images[imageIndex]} alt={images[imageIndex].toString()} priority={true} /></ motion.div>
+                    > <Image src={images[imageIndex]} alt={names[imageIndex]} /></ motion.div>
 
                 </AnimatePresence>
             </div>
