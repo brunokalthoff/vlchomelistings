@@ -2,7 +2,7 @@ import styles from '../../styles/sellers/Offer.module.css'
 import Image from 'next/image';
 import contactJerry from '../../public/contact-jerry.png'
 import { TbHeartHandshake } from 'react-icons/tb';
-import { MdPriceCheck, MdSpeed } from 'react-icons/md';
+import { MdPriceCheck } from 'react-icons/md';
 import { TbArrowLoopRight2 } from 'react-icons/tb';
 import { useRef, useState } from 'react';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
@@ -15,12 +15,13 @@ function Offer() {
     const formRef = useRef();
     const [sending, setSending] = useState(false);
     const [sent, setSent] = useState(false);
-    const [selected, setSelected] = useState(null);
+    const [selected, setSelected] = useState('');
 
     const handleSubmit = e => {
         e.preventDefault();
         setSending(true);
         let formData = new FormData(formRef.current);
+        console.log(new URLSearchParams(formData).toString())
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -37,7 +38,6 @@ function Offer() {
             });
     };
 
-
     return (
         <div className={styles.container}>
             <h2>Get a guaranteed offer in 72 hours.<br />
@@ -51,17 +51,17 @@ function Offer() {
                         <label htmlFor="name">Name*<input type="text" id='name' name='name' required /></label>
                         <div className={styles.doubleInput}><label htmlFor="text">Email*<input type="email" id="email" name='email' required /></label>
                             <label htmlFor="phone">Phone<input type="text" id='phone' name='phone' /></label></div>
-                        <label htmlFor="address">Address*<input type="text" id='address' name='address' value={selected} hidden /> <AddressInput setSelected={setSelected} /> </label>
+                        <label htmlFor="address">Address*<input type="text" id='address' name='address' value={selected} hidden readOnly /> <AddressInput setSelected={setSelected} /> </label>
 
                         <label htmlFor="reason">Why are you selling your home?<textarea id="reason" rows="5" name='reason'></textarea></label>
                         <label htmlFor="move">When do you plan on moving?
                             <select id="move" name='move'>
-                                <option selected disabled>Select your option</option>
-                                <option value="0 - 1 month">0 - 1 month</option>
-                                <option value="1 - 3 months">1 - 3 months</option>
-                                <option value="<3 - 6 months">3 - 6 months</option>
-                                <option value="<6 + months">6+ months</option>
-                            </select></label>
+                                <option value="0 - 1 month" label='0 - 1 months' />
+                                <option value="1 - 3 months" label='1 - 3 months' />
+                                <option value="<3 - 6 months" label='3 - 6 months' />
+                                <option value="<6 + months" label='6+ months' />
+                            </select>
+                        </label>
 
                         <button className={styles.button} type='submit'>
                             {sending && <motion.div animate={{ rotate: 720 }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }}><AiOutlineLoading3Quarters /></motion.div>}

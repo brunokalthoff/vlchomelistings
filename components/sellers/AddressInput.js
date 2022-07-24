@@ -13,8 +13,7 @@ import {
     ComboboxOption,
 } from "@reach/combobox";
 import "@reach/combobox/styles.css";
-import dotenv from 'dotenv'
-dotenv.config()
+
 
 
 const libraries = ["places"]
@@ -22,7 +21,7 @@ const libraries = ["places"]
 function AddressInput({ setSelected }) {
 
     const { isLoaded } = useLoadScript({
-        googleMapsApiKey: process.env.GOOGLE_MAPS_API,
+        googleMapsApiKey: process.env.GOOGLE_MAPS_API || process.env.NEXT_PUBLIC_GOOGLE_MAPS_API,
         libraries: libraries,
     })
 
