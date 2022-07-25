@@ -58,8 +58,8 @@ function Offer() {
                             <select id="move" name='move'>
                                 <option value="0 - 1 month" label='0 - 1 months' />
                                 <option value="1 - 3 months" label='1 - 3 months' />
-                                <option value="<3 - 6 months" label='3 - 6 months' />
-                                <option value="<6 + months" label='6+ months' />
+                                <option value="3 - 6 months" label='3 - 6 months' />
+                                <option value="6+ months" label='6+ months' />
                             </select>
                         </label>
 

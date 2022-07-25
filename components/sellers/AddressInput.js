@@ -1,5 +1,4 @@
 import styles from '../../styles/sellers/Offer.module.css'
-import { useState } from 'react';
 import { useLoadScript } from '@react-google-maps/api';
 import usePlacesAutocomplete, {
     getGeocode,
@@ -25,7 +24,7 @@ function AddressInput({ setSelected }) {
         libraries: libraries,
     })
 
-    if (!isLoaded) return <div>Loading...</div>
+    if (!isLoaded) return <div></div>
 
     return (
         <div className={styles.autocompleteContainer}>
