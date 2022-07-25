@@ -34,10 +34,10 @@ function Articles() {
             </h2>
             <div className={styles.wrapper}>
                 {articles.map((article, key) => {
-                    return <div className={styles.article} key={key}>
+                    return <div onClick={() => router.push('/articles/' + makeSlug(article.title))} className={styles.article} key={key}>
                         <div className={`${article.svg} ${styles.svgs}`} />
                         <div>
-                            <h4 onClick={() => router.push('/articles/' + makeSlug(article.title))}> {article.title}</h4>
+                            <h4> {article.title}</h4>
                             <p> {article.text} </p>
                         </div>
                     </div>

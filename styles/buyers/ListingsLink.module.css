@@ -29,7 +29,7 @@
     font-weight: 700;
     font-size: var(--largetext);
     border: none;
-    margin-top: 2.5rem;
+    margin-top: var(--sectionSpace);
     letter-spacing: -0.1px;
     cursor: pointer;
     transition: all 0.3s;
@@ -57,4 +57,51 @@
   
   .button a svg g {
     fill: var(--blue3);
+  }
+
+  .quick {
+    margin-top: var(--sectionSpace);
+    max-width: 1000px;
+    width: fit-content;
+  }
+
+  .quick h3 {
+    text-align: center;
+    color: var(--grey2);
+  }
+
+  .quick ul {
+    margin-top: var(--sectionSpace);
+    margin-top: 2rem;
+    columns: 3;
+    gap: 4rem;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .quick li {
+    list-style: none;
+    color: var(--grey3);
+    padding: .5rem 0;
+    cursor: pointer;
+  }
+
+  .quick li:hover {
+    /* text-decoration: underline; */
+    transition: all .3 ease;
+    color: var(--blue4);
+  }
+
+  @media screen and (max-width: 900px) {
+    .quick ul {
+      columns: 2;
+
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .quick ul {
+      columns: 1;
+
+    }
   }

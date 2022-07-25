@@ -35,8 +35,12 @@
   font-size: 16px;
 }
 
+.links a:hover {
+  color: var(--blue4);
+}
+
 .linksActive {
-  color: var(--blue3);
+  color: var(--blue2);
 }
 
 .links a:last-child {
