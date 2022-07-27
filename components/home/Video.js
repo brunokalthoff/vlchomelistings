@@ -1,5 +1,5 @@
 import styles from '../../styles/home/Video.module.css'
-import { FaPlay,FaPause } from "react-icons/fa";
+import { BsFillPlayFill,BsFillPauseFill } from "react-icons/bs";
 import { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -33,9 +33,9 @@ function Video() {
                     Your browser does not support the video tag.
                 </video>
                 <motion.div className={styles.playPause}>
-                    {playing === 'init' && <FaPlay />}
-                    {!playing === true && <motion.span initial={{ opacity: 1 }} animate={{ opacity: 0 }} transition={{ duration: 1 }}><FaPause /></motion.span>}
-                    {playing && <motion.span initial={{ opacity: 1 }} animate={{ opacity: 0 }} transition={{ duration: 1 }}><FaPlay /></motion.span>}
+                <div>{playing === 'init' && <BsFillPlayFill />}</div>
+                    {playing === false && <motion.div initial={{ opacity: 1 }} animate={{ opacity: 0 }} transition={{ duration: 1 }}><BsFillPauseFill /></motion.div>}
+                    {playing === true && <motion.div initial={{ opacity: 1 }} animate={{ opacity: 0 }} transition={{ duration: 1 }}><BsFillPlayFill /></motion.div>}
                 </motion.div>
             </div>
         </div>

@@ -80,7 +80,6 @@ function Team() {
                     <motion.div
                         className={styles.imgWrapper}
                         key={page}
-
                         custom={direction}
                         variants={variants}
                         initial="enter"
@@ -102,8 +101,9 @@ function Team() {
                                 paginate(-1);
                             }
                         }}
-
-                    > <Image src={images[imageIndex]} alt={names[imageIndex]} priority={true} /></ motion.div>
+                    >
+                        <Image src={images[imageIndex]} alt={""} priority={true} />
+                    </ motion.div>
 
                 </AnimatePresence>
             </div>
