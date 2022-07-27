@@ -7,7 +7,6 @@ import { motion } from 'framer-motion';
 function Video() {
     const playerRef = useRef();
     const [playing, setPlaying] = useState('init');
-    const [progress, setProgress] = useState(0);
 
     useEffect(() => {
         if (playing !== 'init') {
@@ -31,7 +30,7 @@ function Video() {
     }
 
     return (
-        <div title='Coming soon!' className={styles.videoWrapper}>
+        <div className={styles.videoWrapper}>
             <div className={styles.video} onClick={handleClick}>
                 <video ref={playerRef} width="100%" height="100%">
                     <source src="/hero-video.mp4" type="video/mp4" />
