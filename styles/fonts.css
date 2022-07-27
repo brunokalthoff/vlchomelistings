@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Ginto";
+    src: url('../public/fonts/Ginto-700.woff') format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Windsor";
+    src: url('../public/fonts/Windsor_Regular.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Bebas Neue";
+    src: url('../public/fonts/BebasNeue-Regular.ttf') format("truetype");
+}

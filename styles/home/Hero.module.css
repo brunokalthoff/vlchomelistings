@@ -19,10 +19,6 @@
   padding-bottom: var(--sectionSpace);
 }
 
-.fancy h1 {
-  color: var(--black);
-}
-
 .fancy span {
     color: var(--grey2);
 }

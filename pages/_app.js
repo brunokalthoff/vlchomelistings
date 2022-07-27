@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/fonts.css'
 import "@fontsource/poppins"
 import "@fontsource/poppins/100.css"
 import "@fontsource/poppins/200.css"
