@@ -8,7 +8,7 @@
 }
 
 .video {
-
+  max-width: 100%;
   width: 1280;
   height: 720;
   background-color: white;
@@ -25,15 +25,24 @@
   background-size: cover;
   filter: brightness(0.9); */
   overflow: hidden;
+  position: relative;
 }
 
 .playPause {
   position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  padding: 0;
+  margin: 0;
 }
 
 .playPause svg {
   color: var(--blue1);
-  font-size: 6rem;
+  padding: 0;
+  margin: 0;
 }
 
 .video svg:hover {
@@ -45,9 +54,10 @@
 
 @media screen and (max-width: 450px) {
   .video {
-    width: 100%;
-    height: 20rem;
-    min-height: 20rem;
     border-radius: 0;
+  }
+
+  .playPause {
+    font-size: 3rem;
   }
 }
