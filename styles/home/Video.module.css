@@ -35,14 +35,10 @@
   align-items: center;
   justify-content: center;
   font-size: 6rem;
-  padding: 0;
-  margin: 0;
 }
 
 .playPause svg {
   color: var(--blue1);
-  padding: 0;
-  margin: 0;
 }
 
 .video svg:hover {

@@ -10,14 +10,8 @@ function Video() {
 
     useEffect(() => {
         if (playing !== 'init') {
-
             playing === true ? playerRef.current.play() : playerRef.current.pause();
-
         }
-    }, [playing]);
-
-    useEffect(() => {
-        if (playerRef.current.currentTime) console.log(playerRef.current.currentTime);
     }, [playing]);
 
     const handleClick = () => {
