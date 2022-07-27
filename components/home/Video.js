@@ -40,8 +40,8 @@ function Video() {
                 </video>
                 <motion.div className={styles.playPause}>
                     {playing === 'init' && <IoPlay />}
-                    {playing === true && <motion.span initial={{ opacity: 1 }} animate={{ opacity: 0 }} transition={{ duration: 1 }}><IoPause /></motion.span>}
-                    {!playing && <motion.span initial={{ opacity: 1 }} animate={{ opacity: 0 }} transition={{ duration: 1 }}><IoPlay /></motion.span>}
+                    {!playing === true && <motion.span initial={{ opacity: 1 }} animate={{ opacity: 0 }} transition={{ duration: 1 }}><IoPause /></motion.span>}
+                    {playing && <motion.span initial={{ opacity: 1 }} animate={{ opacity: 0 }} transition={{ duration: 1 }}><IoPlay /></motion.span>}
                 </motion.div>
             </div>
         </div>
