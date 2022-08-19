@@ -5,11 +5,17 @@
   align-items: center;
 }
 
+.hl {
+  width: 80%;
+  border-top: 1px solid rgba(168, 168, 168, 0.178);
+  margin-top: var(--sectionSpace);
+}
+
 .wrapper {
   width: 80%;
   max-width: 1000px;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
   margin-top: var(--sectionSpace);
   gap: 4rem;
@@ -76,11 +82,6 @@
 
   .container > div:first-child {
     flex-direction: column-reverse;
-  }
-
-  .sellersSvg,
-  .buyersSvg {
- 
   }
 
   .text {

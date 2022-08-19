@@ -147,7 +147,6 @@
 }
 
 .container h3 {
-  color: var(--grey2);
   width: 100%;
   text-align: center;
   margin-top: var(--sectionSpace);
@@ -177,7 +176,7 @@
 
 .card svg {
   font-size: 5rem;
-  color: var(--grey3);
+  color: var(--grey2);
   padding: 0;
 }
 

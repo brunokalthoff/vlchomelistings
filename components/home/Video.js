@@ -13,26 +13,26 @@ function Video() {
                     Your browser does not support the video tag.
                 </video>
 
-                <video width="100%" height="100%" autoPlay muted loop>
+                <video style={{marginTop: '4rem'}} width="100%" height="100%" autoPlay muted loop>
                     <source src="/videos/vision.mp4" type="video/mp4" />
                     <source src="/videos/vision.ogg" type="video/ogg" />
                     {/* <source src="/hero-video.webm" type="video/webm" /> */}
                     Your browser does not support the video tag.
                 </video>
-
+{/* 
                 <video width="100%" height="100%" autoPlay muted loop>
                     <source src="/videos/sellers-link.mp4" type="video/mp4" />
                     <source src="/videos/sellers-link.ogg" type="video/ogg" />
-                    {/* <source src="/hero-video.webm" type="video/webm" /> */}
+
                     Your browser does not support the video tag.
                 </video>
 
                 <video width="100%" height="100%" autoPlay muted loop>
                     <source src="/videos/buyers-link.mp4" type="video/mp4" />
                     <source src="/videos/sellers-link.ogg" type="video/ogg" />
-                    {/* <source src="/hero-video.webm" type="video/webm" /> */}
+          
                     Your browser does not support the video tag.
-                </video>
+                </video> */}
 
             </div>
         </div>

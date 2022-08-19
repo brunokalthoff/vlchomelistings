@@ -51,7 +51,7 @@
 
 html,
 body {
-  font-family: "Poppins", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--grey1);
   color: var(--black);
@@ -73,16 +73,19 @@ h1 {
 }
 
 h2 {
+  font-family: "Poppins";
   font-size: var(--headline2);
   line-height: var(--lineHeightH2);
 }
 
 h3 {
+  font-family: "Poppins";
   font-size: var(--headline3);
   line-height: var(--lineHeightH3);
 }
 
 h4 {
+  font-family: "Poppins";
   font-size: var(--headline4);
   line-height: var(--lineHeightH4);
 }
@@ -92,7 +95,7 @@ h4 {
 h5 {
   font-size: var(--largetext);
   line-height: var(--lineHeightH5);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* Normal Text 16px */
@@ -100,7 +103,7 @@ h5 {
 p {
   font-size: var(--normaltext);
   line-height: var(--lineHeightP);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* Small Text 14px */
@@ -108,7 +111,7 @@ p {
 h6 {
   font-size: var(--smalltext);
   line-height: var(--lineHeightH6);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 a {

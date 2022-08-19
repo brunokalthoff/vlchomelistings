@@ -1,5 +1,6 @@
 .videoWrapper {
   width: 100%;
+  background: #FBFAFB;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,6 +9,7 @@
 
 .video {
   width: 100%;
+  max-width: 1280px;
   height: auto;
   background-color: white;
   display: flex;
