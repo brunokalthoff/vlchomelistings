@@ -7,11 +7,13 @@ import vanleeuwen from '../../public/team-vanleeuwen.jpg'
 import little from '../../public/team-little.jpg'
 import pohl from '../../public/team-pohl.jpg'
 import vincent from '../../public/team-vincent.jpg'
+import megan from '../../public/team-evers.jpg'
+import jones from '../../public/team-jones.png'
 
 
-const images = [vanleeuwen, little, pohl, vincent]
-const names = ["Jerry Van Leeuwen", "Graham Little", "Trevor Pohl", "Allisa Vincent"]
-const role = ["Team Owner", "Sales Representative", "Sales Representative", "Transaction & Client Coordinator"]
+const images = [vanleeuwen, little, pohl, megan, jones, vincent]
+const names = ["Jerry Van Leeuwen", "Graham Little", "Trevor Pohl", "Megan Evers", "Wyatt Jones", "Allisa Vincent"]
+const role = ["Team Owner", "Sales Representative", "Sales Representative", "Real Estate Agent", "Director of Lead Generation", "Transaction & Client Coordinator"]
 const bio = [
     <>Prior to becoming one of Kitchener-Waterloo&rsquo;s top real estate agents, Jerry Van Leeuwen enjoyed a career as an Advanced Care Paramedic in the Region of Waterloo. Caring for people is in his nature, which is why he places his values on family, business, and health. He takes time and care while helping each of his clients understand the real estate market and the decisions that must be made to achieve their unique goals.<br />
         <br />
@@ -30,6 +32,14 @@ const bio = [
         My dedication and commitment to my clients has secured my success as a Real Estate Professional. With each transaction my clients have repeated that my authentic professional approach has made their experience both positive and stress free. My continued focus on hard work and determination has allowed me to obtain the designation of a &ldquo;Top 20%&rdquo; agent in Keller Williams Golden Triangle Brokerage to start the year in 2019. This work ethic has also been a contributing factor in helping Van Leeuwen Real Estate Advisors be awarded &ldquo;Top Team&rdquo; in the brokerage for January 2019.<br />
         I enthusiastically look forward to helping you accomplish your real estate needs, please reach out anytime and lets set up your personal consultation.</>,
     <>Between his passion for assisting others in sales and unique experience in the residential world, Trevor offers a unique vision for helping you achieve your dreams. Trevor spent the last 7 years in the paint industry helping homeowners and tradespeople build their dream home. His problem-solving skills, along with an understanding of how to understand and increase value in the market ensured every client was left satisfied with more than expected. <br /><br /> Prior to this, Trevor has experience in the trades working landscaping and contracting that help him best understand the value in a home. This experience has developed a passion for real estate, a personal interest in real estate investing and a desire to help others accomplish their goals in real estate. Trevor holds a Bachelor of commerce, Marketing Management, from the University of Guelph. He grew up in Orangeville, Ontario but has spent the last 10 years in the Tri-cities/Guelph market, currently residing in Kitchener. He loves all things sports, including golf, soccer, basketball and volleyball. Other interests include working on their house, spending time with friends and family and spoiling their energetic puppy.</>,
+    <>Megan is hardworking and dedicated to her clients. As a mother of two young girls, she has a gift for active listening and multi-tasking. Megan has lived in the Waterloo Region for over 20 years; she is active in her community and knows it inside and out.<br />
+        <br />
+        She worked as an Early Childhood Educator before she became a REALTOR&reg;. Her passion for helping families achieve their real estate goals is at the forefront of her business.<br />
+        <br />
+        She is genuine and kind with a contagious personality and a smile that can light up the room. When she isn&apos;t focused on her clients Megan can be found spending time with her 2 children and family. She loves to cook, and can often be seen at local restaurants enjoying great food and even better company.<br />
+        <br />
+        Above all, Megan knows how important the right home is for you and your family, she will make you feel confident and comfortable when buying and selling with her.</>,
+    <>Wyatt is the Director of Lead Generation for the VanLeeuwen Real Estate Advisors. He is dedicated to delivering an excellent client experience and does so through his empathetic nature, warm personality, and desire to help and nurture. In his previous career, he was the client experience and marketing manager for a local wedding venue, which really allowed him to develop professionally and grow personally. In Wyatt&apos;s spare time, he loves to spend time outdoors; camping, hiking, swimming, as well as taking part in community recreational sports and activities.</>,
     <>Allisa is our Transaction and Client Care Coordinator and manages the entire transaction process from start to finish! Allisa comes to us with a background in Management and Human Resources but decided to pursue her long time passion for real estate.<br />
 
         Since purchasing a home of her own, she realized she wanted to help others like herself and has made it her mission to provide a smooth and amazing experience to each and every one of our clients.</>

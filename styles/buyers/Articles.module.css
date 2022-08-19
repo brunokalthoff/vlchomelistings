@@ -67,7 +67,7 @@
 
 .article:hover h4 {
   /* text-decoration: underline; */
-  color: var(--blue4);
+  color: var(--grey2);
 }
 
 .article:hover p {

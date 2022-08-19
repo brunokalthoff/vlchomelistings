@@ -1,7 +1,7 @@
 :root {
   /* Color styles */
   --black: #1c1c1c;
-  --black: #1e293b;
+  --black: hsl(217, 33%, 17%);
   --grey1: hsla(206, 41.2%, 96.7%, 1);
   --grey2: hsla(216, 14.5%, 56.9%, 1);
   --grey3: #334155;
@@ -30,6 +30,7 @@
   /* Heights */
   --navbarheight: 5rem;
   --sectionSpace: 4rem;
+  --borderRadius: 0px;
 
   --lineHeightH1: calc(var(--headline1) * 1.5);
   --lineHeightH2: calc(var(--headline2) * 1.5);

@@ -23,7 +23,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 3rem;
+  border-radius: var(--borderRadius);
   margin-top: var(--sectionSpace);
   overflow: hidden;
 }
@@ -94,7 +94,7 @@
 .bio {
   width: 80%;
   background-color: var(--white);
-  border-radius: 3rem;
+  border-radius: var(--borderRadius);
   padding: 2rem;
 }
 

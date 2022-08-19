@@ -59,7 +59,7 @@
 .form {
   width: 400px;
   background: var(--white);
-  border-radius: 3rem;
+  border-radius: var(--borderRadius);
   display: flex;
   gap: 2rem;
   flex-direction: column;

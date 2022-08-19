@@ -36,7 +36,7 @@ function ListingsLink() {
             <h2>Search our home listings. 🔎
                 <span> We serve Cambridge, Kitchener, Waterloo, Guelph, Woodstock, and surrounding areas.</span>
             </h2>
-            <div className={styles.button}><Link href='https://www.findsouthernontariohomes.com/' passHref><a target="_blank" rel="noopener noreferrer">Search listings <FcExternal /></a></Link></div>
+            {/* <div className={styles.button}><Link href='https://www.findsouthernontariohomes.com/' passHref><a target="_blank" rel="noopener noreferrer">Search listings <FcExternal /></a></Link></div>
 
             <div className={styles.quick}>
                 <h3>Quick searches</h3>
@@ -46,7 +46,13 @@ function ListingsLink() {
                         return <li key={key}><Link href={`https://www.findsouthernontariohomes.com/search/quick/${item.link}`} passHref><a target="_blank" rel="noopener noreferrer">Homes For Sale In {item.title}</a></Link></li>
                     })}
                 </ul>
+            </div> */}
+
+            <div className={styles.iframe}>
+                <iframe src="https://matrix.itsorealestate.ca/Matrix/public/IDX.aspx?idx=859e298" width="100%" height="100%" frameBorder="0" marginWidth="0" marginHeight="0" />
             </div>
+
+
         </div>
     );
 }

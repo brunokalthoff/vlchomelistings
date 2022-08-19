@@ -55,7 +55,7 @@
   width: 24rem;
   height: 24rem;
   background: var(--white);
-  border-radius: 3rem;
+  border-radius: var(--borderRadius);
 }
 
 .success {
