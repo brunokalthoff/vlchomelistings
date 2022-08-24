@@ -11,7 +11,7 @@ function Video() {
         <div className={styles.videoWrapper}>
             <div className={styles.video}>
 
-                <video ref={videoOne} width="100%" height="100%" autoPlay muted loop>
+                <video poster="/videos/mission-placeholder.png" ref={videoOne} width="100%" height="100%" autoPlay muted loop>
                     <source src="/videos/mission.webm" type="video/webm" />
                     <source src="/videos/mission.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
