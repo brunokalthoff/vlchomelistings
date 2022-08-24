@@ -51,7 +51,7 @@
 
 .title:hover {
   background: var(--grey1);
-  border-radius: 1.5rem;
+  border-radius: var(--borderRadius);
 }
 
 .calculator {

@@ -67,11 +67,11 @@
 
 .article:hover h4 {
   /* text-decoration: underline; */
-  color: var(--grey2);
+  color: var(--blue2);
 }
 
 .article:hover p {
-  color: var(--blue4);
+  color: var(--blue5);
 }
 
 @media screen and (max-width: 900px) {

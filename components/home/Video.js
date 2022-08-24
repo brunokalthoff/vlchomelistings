@@ -1,38 +1,27 @@
 import styles from '../../styles/home/Video.module.css'
-
+import { useRef, useEffect } from 'react';
 function Video() {
+    const videoOne = useRef();
+    useEffect(() => {
+        videoOne.current.playbackRate = 0.9;
+        videoOne.current.play();
+    }, []);
 
     return (
         <div className={styles.videoWrapper}>
             <div className={styles.video}>
 
-                <video width="100%" height="100%" autoPlay muted loop>
+                <video ref={videoOne} width="100%" height="100%" autoPlay muted loop>
+                    <source src="/videos/mission.webm" type="video/webm" />
                     <source src="/videos/mission.mp4" type="video/mp4" />
-                    <source src="/videos/mission.ogg" type="video/ogg" />
-                    {/* <source src="/hero-video.webm" type="video/webm" /> */}
                     Your browser does not support the video tag.
                 </video>
 
-                <video style={{marginTop: '4rem'}} width="100%" height="100%" autoPlay muted loop>
+                <video width="100%" height="100%" autoPlay muted loop>
+                    <source src="/videos/vision.webm" type="video/webm" />
                     <source src="/videos/vision.mp4" type="video/mp4" />
-                    <source src="/videos/vision.ogg" type="video/ogg" />
-                    {/* <source src="/hero-video.webm" type="video/webm" /> */}
                     Your browser does not support the video tag.
                 </video>
-{/* 
-                <video width="100%" height="100%" autoPlay muted loop>
-                    <source src="/videos/sellers-link.mp4" type="video/mp4" />
-                    <source src="/videos/sellers-link.ogg" type="video/ogg" />
-
-                    Your browser does not support the video tag.
-                </video>
-
-                <video width="100%" height="100%" autoPlay muted loop>
-                    <source src="/videos/buyers-link.mp4" type="video/mp4" />
-                    <source src="/videos/sellers-link.ogg" type="video/ogg" />
-          
-                    Your browser does not support the video tag.
-                </video> */}
 
             </div>
         </div>
