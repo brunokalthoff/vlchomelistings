@@ -30,7 +30,7 @@
   /* Heights */
   --navbarheight: 5rem;
   --sectionSpace: 4rem;
-  --borderRadius: 4px;
+  --borderRadius: 0px;
 
   --lineHeightH1: calc(var(--headline1) * 1.5);
   --lineHeightH2: calc(var(--headline2) * 1.5);
