@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: var(--white);
+    padding-bottom: var(--sectionSpace);
+  }
+
+  .iframe {
+    margin-top: var(--sectionSpace);
+    width: 100%;
+    height: calc(100vh - var(--navbarheight));
+  }
+  
+  .container h2 {
+    text-align: center;
+    margin-top: var(--sectionSpace);
+    padding: 0 2rem;
+    max-width: 1000px;
+    position: relative;
+  }
+  
+  .container h2 span {
+    color: var(--grey2);
+  }

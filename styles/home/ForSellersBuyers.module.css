@@ -25,26 +25,6 @@
   border-radius: var(--borderRadius);
 }
 
-.wrapper li {
-  list-style: none;
-}
-
-.sellersSvg,
-.buyersSvg {
-  height: 24rem;
-  width: 24rem;
-  border-radius: 3rem;
-  background-color: var(--white);
-  box-shadow: 0 0 10px var(--grey2);
-  background-image: url("../../public/svgs/for-sellers.svg");
-  background-position: center center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.buyersSvg {
-  background-image: url("../../public/svgs/for-buyers.svg");
-}
 
 .text {
   max-width: 500px;
@@ -89,7 +69,7 @@
   }
 
   .text {
-    text-align: center;
+    /* text-align: center; */
     display: flex;
     align-items: center;
     flex-direction: column;

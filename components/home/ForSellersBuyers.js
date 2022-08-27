@@ -3,8 +3,6 @@ import Link from 'next/link'
 
 function ForSellersBuyers() {
 
-
-
     return (
         <div className={styles.container}>
 

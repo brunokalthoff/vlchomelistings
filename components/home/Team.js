@@ -8,12 +8,12 @@ import little from '../../public/team-little.jpg'
 import pohl from '../../public/team-pohl.jpg'
 import vincent from '../../public/team-vincent.jpg'
 import megan from '../../public/team-evers.jpg'
-import jones from '../../public/team-jones.png'
+import jones from '../../public/team-jones.jpg'
 
 
 const images = [vanleeuwen, little, pohl, megan, jones, vincent]
 const names = ["Jerry Van Leeuwen", "Graham Little", "Trevor Pohl", "Megan Evers", "Wyatt Jones", "Allisa Vincent"]
-const role = ["Team Owner", "Sales Representative", "Sales Representative", "Real Estate Agent", "Director of Lead Generation", "Transaction & Client Coordinator"]
+const role = ["Team Owner", "Sales Representative", "Sales Representative", "Real Estate Agent", "Director of Lead Generation", "Director of Operations"]
 const bio = [
     <>Prior to becoming one of Kitchener-Waterloo&rsquo;s top real estate agents, Jerry Van Leeuwen enjoyed a career as an Advanced Care Paramedic in the Region of Waterloo. Caring for people is in his nature, which is why he places his values on family, business, and health. He takes time and care while helping each of his clients understand the real estate market and the decisions that must be made to achieve their unique goals.<br />
         <br />
@@ -39,10 +39,8 @@ const bio = [
         She is genuine and kind with a contagious personality and a smile that can light up the room. When she isn&apos;t focused on her clients Megan can be found spending time with her 2 children and family. She loves to cook, and can often be seen at local restaurants enjoying great food and even better company.<br />
         <br />
         Above all, Megan knows how important the right home is for you and your family, she will make you feel confident and comfortable when buying and selling with her.</>,
-    <>Wyatt is the Director of Lead Generation for the VanLeeuwen Real Estate Advisors. He is dedicated to delivering an excellent client experience and does so through his empathetic nature, warm personality, and desire to help and nurture. In his previous career, he was the client experience and marketing manager for a local wedding venue, which really allowed him to develop professionally and grow personally. In Wyatt&apos;s spare time, he loves to spend time outdoors; camping, hiking, swimming, as well as taking part in community recreational sports and activities.</>,
-    <>Allisa is our Transaction and Client Care Coordinator and manages the entire transaction process from start to finish! Allisa comes to us with a background in Management and Human Resources but decided to pursue her long time passion for real estate.<br />
-
-        Since purchasing a home of her own, she realized she wanted to help others like herself and has made it her mission to provide a smooth and amazing experience to each and every one of our clients.</>
+    <>Wyatt is dedicated to delivering an excellent client experience and does so through his empathetic nature, warm personality, and desire to help and nurture. In his previous career, he was the client experience and marketing manager for a local wedding venue, which really allowed him to develop professionally and grow personally. In Wyatt&apos;s spare time, he loves to spend time outdoors; camping, hiking, swimming, as well as taking part in community recreational sports and activities.</>,
+    <>Allisa comes to us with a background in Management and Human Resources but decided to pursue her long-time passion for real estate. Since purchasing a home of her own, she realized she wanted to help others like herself and has made it her mission to provide a smooth and amazing experience to each and every one of our clients. Allisa also leads the team ensuring that an exceptional client experience is delivered to everyone we work with!</>
 ]
 
 const variants = {
