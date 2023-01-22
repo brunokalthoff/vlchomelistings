@@ -30,7 +30,7 @@
   /* Heights */
   --navbarheight: 5rem;
   --sectionSpace: 4rem;
-  --borderRadius: 0px;
+  --borderRadius: 4px;
 
   --lineHeightH1: calc(var(--headline1) * 1.5);
   --lineHeightH2: calc(var(--headline2) * 1.5);
@@ -51,8 +51,8 @@
 
 html,
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--grey1);
   color: var(--black);
   font-size: 16px;

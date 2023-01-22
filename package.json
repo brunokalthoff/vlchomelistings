@@ -10,15 +10,14 @@
   },
   "dependencies": {
     "@fontsource/poppins": "^4.5.8",
-    "@reach/combobox": "^0.17.0",
-    "@react-google-maps/api": "^2.12.1",
+    "@splidejs/react-splide": "^0.7.12",
     "comma-number": "^2.1.0",
     "framer-motion": "^6.3.16",
     "next": "12.2.0",
+    "prettier": "^2.8.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.4.0",
-    "use-places-autocomplete": "^4.0.0"
+    "react-icons": "^4.4.0"
   },
   "devDependencies": {
     "eslint": "8.19.0",

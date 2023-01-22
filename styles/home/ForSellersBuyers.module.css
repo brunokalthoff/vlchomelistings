@@ -15,7 +15,7 @@
   width: 80%;
   max-width: 1000px;
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: space-between;
   margin-top: var(--sectionSpace);
   gap: 4rem;
@@ -24,7 +24,6 @@
 .video video {
   border-radius: var(--borderRadius);
 }
-
 
 .text {
   max-width: 500px;

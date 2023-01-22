@@ -26,6 +26,7 @@
   border-radius: var(--borderRadius);
   margin-top: var(--sectionSpace);
   overflow: hidden;
+  border-radius: var(--borderRadius);
 }
 
 .imgWrapper {
@@ -35,60 +36,15 @@
   width: 100%;
 }
 
-.pagination {
-  width: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  position: relative;
-  gap: 0.5rem;
-  padding: 2rem 0;
+.nameSplide {
+  width: 24rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
 }
-
-.next,
-.prev {
-  background: var(--white);
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 18px;
-  z-index: 2;
-}
-
-.prev {
-  transform: scale(-1);
-}
-
-.pagis {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.balls {
-  width: 0.5rem;
-  height: 0.5rem;
-  background: var(--grey2);
-  border-radius: 50%;
-  filter: brightness(1.1);
-}
-
-.ballsActive {
-  transform: scale(2);
-  transition: all 0.2s;
-  filter: brightness(1);
-}
-
 .name {
   font-weight: 500;
-  margin-top: 2rem;
+  margin: 3rem auto;
+  text-align: center;
 }
 
 .bio {
@@ -96,6 +52,7 @@
   background-color: var(--white);
   border-radius: var(--borderRadius);
   padding: 2rem;
+  border-radius: var(--borderRadius);
 }
 
 .bio h4 {
@@ -116,13 +73,16 @@
 }
 
 @media screen and (max-width: 450px) {
+  .slider {
+    width: 100%;
+    border-radius: 0;
+  }
   .bio {
     width: 100%;
     border-radius: 0;
   }
 
   .slider {
-border-radius: 0;
+    border-radius: 0;
   }
-
 }
