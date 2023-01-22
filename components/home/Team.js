@@ -1,6 +1,6 @@
 import styles from "../../styles/home/Team.module.css";
 import Image from "next/image";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { wrap } from "popmotion";
 import vanleeuwen from "../../public/team-vanleeuwen.jpg";
@@ -140,7 +140,6 @@ function Team() {
   const mainRef = useRef();
   const namesRef = useRef();
   const biosRef = useRef();
-  console.log("hier: ", mainRef.current);
 
   useEffect(() => {
     if (mainRef.current && biosRef.current && biosRef.current.splide) {

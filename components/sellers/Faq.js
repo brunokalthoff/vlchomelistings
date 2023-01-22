@@ -56,7 +56,10 @@ function Faq() {
             <motion.div onClick={() => item.onClick()} key={key} className={styles.question}>
               <div className={styles.questionMain}>
                 <h5> {item.question} </h5>
-                <motion.div animate={open === key ? { rotate: 45 } : { rotate: 0 }} transition={{ ease: "linear" }}>
+                <motion.div
+                  animate={item.open === key ? { rotate: 45 } : { rotate: 0 }}
+                  transition={{ ease: "linear" }}
+                >
                   <HiPlus />
                 </motion.div>
               </div>

@@ -13,31 +13,39 @@
 
 .wrapper {
   width: 80%;
-  max-width: 1000px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: var(--sectionSpace);
   gap: 4rem;
+  background-color: var(--blue0);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.video {
+  flex: 2;
 }
 
 .video video {
   border-radius: var(--borderRadius);
+  min-height: 100%;
 }
 
 .text {
   max-width: 500px;
+  flex: 1;
 }
 
 .text h5 {
   font-size: var(--largetext);
   margin-top: 1rem;
-  color: var(--grey2);
+  color: var(--black);
 }
 
 .button {
   width: fit-content;
-  background: var(--buttonPrimary);
+  background: var(--black);
   padding: 1rem;
   border-radius: 2rem;
   color: var(--white);
@@ -54,7 +62,7 @@
   background: var(--buttonPrimaryHover);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .wrapper {
     width: 95%;
     justify-content: center;

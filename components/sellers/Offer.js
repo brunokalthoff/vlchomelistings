@@ -18,7 +18,6 @@ function Offer() {
     e.preventDefault();
     setSending(true);
     let formData = new FormData(formRef.current);
-    console.log(new URLSearchParams(formData).toString());
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
